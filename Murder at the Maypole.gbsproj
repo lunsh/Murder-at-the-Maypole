@@ -4890,7 +4890,8 @@
                         "$variable[3]$": "2",
                         "$variable[4]$": "3",
                         "$variable[5]$": "5",
-                        "__collapse": true
+                        "__collapse": true,
+                        "$variable[6]$": "18"
                     },
                     "id": "cb6b0cb0-bcce-4ad9-b7b6-0813ceef247f"
                 }
@@ -5263,7 +5264,8 @@
                         "$variable[3]$": "2",
                         "$variable[4]$": "3",
                         "$variable[5]$": "5",
-                        "__collapse": true
+                        "__collapse": true,
+                        "$variable[6]$": "18"
                     },
                     "id": "7888523e-6145-4f92-aae0-15efba625dec"
                 }
@@ -6206,7 +6208,8 @@
                         "$variable[3]$": "2",
                         "$variable[4]$": "3",
                         "$variable[5]$": "5",
-                        "__collapse": true
+                        "__collapse": true,
+                        "$variable[6]$": "18"
                     },
                     "id": "5f844b55-987f-41dd-abdc-98478a19758b"
                 }
@@ -6463,7 +6466,9 @@
                         "variable": "14",
                         "operator": "==",
                         "comparator": 1,
-                        "__collapseElse": true
+                        "__collapseElse": true,
+                        "__collapse": false,
+                        "__disableElse": true
                     },
                     "children": {
                         "true": [
@@ -6473,7 +6478,7 @@
                                     "variable": "5",
                                     "operator": "==",
                                     "comparator": "0",
-                                    "__collapseElse": true
+                                    "__collapseElse": false
                                 },
                                 "children": {
                                     "true": [
@@ -6492,7 +6497,49 @@
                                             "id": "5fb3cdf4-e09c-495b-832b-4c7116324e3f"
                                         }
                                     ],
-                                    "false": []
+                                    "false": [
+                                        {
+                                            "command": "EVENT_IF_VALUE",
+                                            "args": {
+                                                "variable": "9",
+                                                "operator": "==",
+                                                "comparator": "0",
+                                                "__collapseElse": true
+                                            },
+                                            "children": {
+                                                "true": [
+                                                    {
+                                                        "command": "EVENT_IF_VALUE",
+                                                        "args": {
+                                                            "variable": "10",
+                                                            "operator": "==",
+                                                            "comparator": "0",
+                                                            "__collapseElse": true,
+                                                            "__disableElse": true
+                                                        },
+                                                        "children": {
+                                                            "true": [
+                                                                {
+                                                                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                                                                    "args": {
+                                                                        "customEventId": "e2c4e330-ebe4-4e65-8673-63da1a0cad37",
+                                                                        "$variable[0]$": "13",
+                                                                        "$variable[1]$": "15",
+                                                                        "__collapse": true
+                                                                    },
+                                                                    "id": "0ef847ed-1053-42e3-8d00-768f20cc9dfd"
+                                                                }
+                                                            ],
+                                                            "false": []
+                                                        },
+                                                        "id": "71abf48d-ba7a-4a99-b60e-6efd880114ae"
+                                                    }
+                                                ],
+                                                "false": []
+                                            },
+                                            "id": "8e2d72fe-f9e3-47aa-b918-7ef70ba1c0d1"
+                                        }
+                                    ]
                                 },
                                 "id": "9cfe511b-252c-4a53-9e8f-a0de965b3653"
                             }
@@ -6900,7 +6947,8 @@
                 {
                     "command": "EVENT_SET_TRUE",
                     "args": {
-                        "variable": "13"
+                        "variable": "13",
+                        "__collapse": false
                     },
                     "id": "f9b95703-c513-4ed5-bff1-5127e6f52a33"
                 },
@@ -6910,6 +6958,13 @@
                         "variable": "14"
                     },
                     "id": "0e314957-c79e-4261-a89d-e902551fd6c3"
+                },
+                {
+                    "command": "EVENT_SET_TRUE",
+                    "args": {
+                        "variable": "5"
+                    },
+                    "id": "0df985a1-8f9d-478d-ac18-d6a9773004a4"
                 },
                 {
                     "command": "EVENT_SET_INPUT_SCRIPT",
@@ -7062,7 +7117,8 @@
                         "$variable[3]$": "2",
                         "$variable[4]$": "3",
                         "$variable[5]$": "5",
-                        "__collapse": true
+                        "__collapse": true,
+                        "$variable[6]$": "18"
                     },
                     "id": "61d54779-bf2b-4d2f-9949-8f46af99fac7"
                 }
@@ -17944,6 +18000,10 @@
                 "5": {
                     "id": "5",
                     "name": "MetAll"
+                },
+                "6": {
+                    "id": "6",
+                    "name": "EvidenceHaleFlustered"
                 }
             },
             "actors": {},
@@ -18002,6 +18062,20 @@
                                                                         "__disableElse": true
                                                                     },
                                                                     "children": {
+                                                                        "true": [],
+                                                                        "false": []
+                                                                    },
+                                                                    "id": "beb087a7-f52f-4e2b-9318-97adc31e78e6"
+                                                                },
+                                                                {
+                                                                    "command": "EVENT_IF_VALUE",
+                                                                    "args": {
+                                                                        "variable": "6",
+                                                                        "operator": "==",
+                                                                        "comparator": 1,
+                                                                        "__collapseElse": true
+                                                                    },
+                                                                    "children": {
                                                                         "true": [
                                                                             {
                                                                                 "command": "EVENT_SET_TRUE",
@@ -18013,7 +18087,7 @@
                                                                         ],
                                                                         "false": []
                                                                     },
-                                                                    "id": "beb087a7-f52f-4e2b-9318-97adc31e78e6"
+                                                                    "id": "7d041848-88ab-4fae-b276-e557fd1d612f"
                                                                 }
                                                             ],
                                                             "false": []
@@ -19305,6 +19379,1423 @@
                     "id": "f4b88b88-daf4-4037-a56b-a5c77af24fab"
                 }
             ]
+        },
+        {
+            "id": "e2c4e330-ebe4-4e65-8673-63da1a0cad37",
+            "name": "Hale2Initial",
+            "description": "After meeting everyone and obtaining the Hale Flustered evidence",
+            "variables": {
+                "0": {
+                    "id": "0",
+                    "name": "SkillPugilism"
+                },
+                "1": {
+                    "id": "1",
+                    "name": "SkillForbearance"
+                },
+                "2": {
+                    "id": "2",
+                    "name": "Local 0"
+                },
+                "3": {
+                    "id": "3",
+                    "name": "FriendshipHale"
+                }
+            },
+            "actors": {},
+            "script": [
+                {
+                    "command": "EVENT_IF_VALUE",
+                    "args": {
+                        "variable": "0",
+                        "operator": "==",
+                        "comparator": 1,
+                        "__collapseElse": false
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                "args": {
+                                    "__scriptTabs": "text",
+                                    "text": [
+                                        "\\007\\002Detective, how is the\ninvestigation going?"
+                                    ],
+                                    "nameTag": "\\007\\002HALE",
+                                    "nameX": 2,
+                                    "avatarType": "small",
+                                    "avatarId": "",
+                                    "largeAvatar": "",
+                                    "avatarX": 2,
+                                    "avatarY": 2,
+                                    "avatarWidth": 3,
+                                    "orientation": "left",
+                                    "__collapse": false
+                                },
+                                "id": "373e08df-e356-4827-b2f4-0b7333f5937a"
+                            },
+                            {
+                                "command": "EVENT_MENU",
+                                "args": {
+                                    "variable": "2",
+                                    "items": 2,
+                                    "option1": "\\007\\002§ I can't divulge.",
+                                    "option2": "\\007\\002Fine",
+                                    "option3": "",
+                                    "option4": "",
+                                    "option5": "",
+                                    "option6": "",
+                                    "option7": "",
+                                    "option8": "",
+                                    "cancelOnB": true,
+                                    "layout": "dialogue",
+                                    "cancelOnLastOption": true
+                                },
+                                "id": "90e159c7-2129-4594-a075-ce7e1b355ed2"
+                            },
+                            {
+                                "command": "EVENT_IF_VALUE",
+                                "args": {
+                                    "variable": "2",
+                                    "operator": "==",
+                                    "comparator": 1,
+                                    "__collapseElse": false
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                            "args": {
+                                                "__scriptTabs": "text",
+                                                "text": [
+                                                    "\\007\\002Detective, how is the\ninvestigation going?"
+                                                ],
+                                                "nameTag": "\\007\\002HALE",
+                                                "nameX": 2,
+                                                "avatarType": "small",
+                                                "avatarId": "",
+                                                "largeAvatar": "",
+                                                "avatarX": 2,
+                                                "avatarY": 2,
+                                                "avatarWidth": 3,
+                                                "orientation": "left",
+                                                "__collapse": false
+                                            },
+                                            "id": "2a963a8a-55be-464b-b5fd-efae1624b2d7"
+                                        },
+                                        {
+                                            "command": "EVENT_DEC_VALUE",
+                                            "args": {
+                                                "variable": "3",
+                                                "__collapse": true
+                                            },
+                                            "id": "3546345d-6149-4511-8121-e152c8919a67"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                            "args": {
+                                                "__scriptTabs": "text",
+                                                "text": [
+                                                    "\\007\\002Detective, how is the\ninvestigation going?"
+                                                ],
+                                                "nameTag": "\\007\\002HALE",
+                                                "nameX": 2,
+                                                "avatarType": "small",
+                                                "avatarId": "",
+                                                "largeAvatar": "",
+                                                "avatarX": 2,
+                                                "avatarY": 2,
+                                                "avatarWidth": 3,
+                                                "orientation": "left",
+                                                "__collapse": false
+                                            },
+                                            "id": "826921f5-aa7e-4b76-8240-3ebd23ee128d"
+                                        }
+                                    ]
+                                },
+                                "id": "51b080c2-b09b-46b5-91fa-fde148930f5e"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "command": "EVENT_IF_VALUE",
+                                "args": {
+                                    "variable": "1",
+                                    "operator": "==",
+                                    "comparator": 1,
+                                    "__collapseElse": false
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                            "args": {
+                                                "__scriptTabs": "text",
+                                                "text": [
+                                                    "\\007\\002Detective, how is the\ninvestigation going?"
+                                                ],
+                                                "nameTag": "\\007\\002HALE",
+                                                "nameX": 2,
+                                                "avatarType": "small",
+                                                "avatarId": "",
+                                                "largeAvatar": "",
+                                                "avatarX": 2,
+                                                "avatarY": 2,
+                                                "avatarWidth": 3,
+                                                "orientation": "left",
+                                                "__collapse": false
+                                            },
+                                            "id": "befcbe8c-e990-4b03-992e-91f80389fd60"
+                                        },
+                                        {
+                                            "command": "EVENT_MENU",
+                                            "args": {
+                                                "variable": "2",
+                                                "items": 2,
+                                                "option1": "\\007\\002° Is everything okay?",
+                                                "option2": "\\007\\002Fine",
+                                                "option3": "",
+                                                "option4": "",
+                                                "option5": "",
+                                                "option6": "",
+                                                "option7": "",
+                                                "option8": "",
+                                                "cancelOnB": true,
+                                                "layout": "dialogue",
+                                                "cancelOnLastOption": true
+                                            },
+                                            "id": "5a0c54fb-fd17-4113-a887-2c834cf08882"
+                                        },
+                                        {
+                                            "command": "EVENT_IF_VALUE",
+                                            "args": {
+                                                "variable": "2",
+                                                "operator": "==",
+                                                "comparator": 1,
+                                                "__collapseElse": false
+                                            },
+                                            "children": {
+                                                "true": [
+                                                    {
+                                                        "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                        "args": {
+                                                            "__scriptTabs": "text",
+                                                            "text": [
+                                                                "\\007\\002Detective, how is the\ninvestigation going?"
+                                                            ],
+                                                            "nameTag": "\\007\\002HALE",
+                                                            "nameX": 2,
+                                                            "avatarType": "small",
+                                                            "avatarId": "",
+                                                            "largeAvatar": "",
+                                                            "avatarX": 2,
+                                                            "avatarY": 2,
+                                                            "avatarWidth": 3,
+                                                            "orientation": "left",
+                                                            "__collapse": false
+                                                        },
+                                                        "id": "eeeb42ff-6c6a-46b2-856c-d3d0c39629cc"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_INC_VALUE",
+                                                        "args": {
+                                                            "variable": "3",
+                                                            "__collapse": true
+                                                        },
+                                                        "id": "7db30797-9024-4954-bc3d-9924d1b5249b"
+                                                    }
+                                                ],
+                                                "false": [
+                                                    {
+                                                        "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                        "args": {
+                                                            "__scriptTabs": "text",
+                                                            "text": [
+                                                                "\\007\\002Detective, how is the\ninvestigation going?"
+                                                            ],
+                                                            "nameTag": "\\007\\002HALE",
+                                                            "nameX": 2,
+                                                            "avatarType": "small",
+                                                            "avatarId": "",
+                                                            "largeAvatar": "",
+                                                            "avatarX": 2,
+                                                            "avatarY": 2,
+                                                            "avatarWidth": 3,
+                                                            "orientation": "left",
+                                                            "__collapse": false
+                                                        },
+                                                        "id": "483d93e8-fdea-4583-86af-42b4866f9128"
+                                                    }
+                                                ]
+                                            },
+                                            "id": "e1a6fe24-5c64-4793-bd6b-b79ddb4ae254"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                            "args": {
+                                                "__scriptTabs": "text",
+                                                "text": [
+                                                    "\\007\\002Detective, how is the\ninvestigation going?"
+                                                ],
+                                                "nameTag": "\\007\\002HALE",
+                                                "nameX": 2,
+                                                "avatarType": "small",
+                                                "avatarId": "",
+                                                "largeAvatar": "",
+                                                "avatarX": 2,
+                                                "avatarY": 2,
+                                                "avatarWidth": 3,
+                                                "orientation": "left",
+                                                "__collapse": false
+                                            },
+                                            "id": "7f890c8f-52bf-42bb-9752-2572dd54c221"
+                                        }
+                                    ]
+                                },
+                                "id": "bffb7192-82b0-4362-8af9-31cccecf73e4"
+                            }
+                        ]
+                    },
+                    "id": "b6cc388c-a69a-48b5-8aac-a291fe5f8cf4"
+                }
+            ]
+        },
+        {
+            "id": "3a956406-d079-42f9-a56a-7619260ab2c0",
+            "name": "Xed2Initial",
+            "description": "After meeting everyone and obtaining the Hale Flustered evidence",
+            "variables": {
+                "0": {
+                    "id": "0",
+                    "name": "SkillPugilism"
+                },
+                "1": {
+                    "id": "1",
+                    "name": "SkillForbearance"
+                },
+                "2": {
+                    "id": "2",
+                    "name": "Local 0"
+                },
+                "3": {
+                    "id": "3",
+                    "name": "FriendshipX"
+                }
+            },
+            "actors": {},
+            "script": [
+                {
+                    "command": "EVENT_IF_VALUE",
+                    "args": {
+                        "variable": "0",
+                        "operator": "==",
+                        "comparator": 1,
+                        "__collapseElse": false
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                "args": {
+                                    "__scriptTabs": "text",
+                                    "text": [
+                                        "\\007\\002Detective, how is the\ninvestigation going?"
+                                    ],
+                                    "nameTag": "\\007\\002HALE",
+                                    "nameX": 2,
+                                    "avatarType": "small",
+                                    "avatarId": "",
+                                    "largeAvatar": "",
+                                    "avatarX": 2,
+                                    "avatarY": 2,
+                                    "avatarWidth": 3,
+                                    "orientation": "left",
+                                    "__collapse": false
+                                },
+                                "id": "1cb6d3fb-42f3-4de2-ad4f-8bb187a2eb98"
+                            },
+                            {
+                                "command": "EVENT_MENU",
+                                "args": {
+                                    "variable": "2",
+                                    "items": 2,
+                                    "option1": "\\007\\002§ I can't divulge.",
+                                    "option2": "\\007\\002Fine",
+                                    "option3": "",
+                                    "option4": "",
+                                    "option5": "",
+                                    "option6": "",
+                                    "option7": "",
+                                    "option8": "",
+                                    "cancelOnB": true,
+                                    "layout": "dialogue",
+                                    "cancelOnLastOption": true
+                                },
+                                "id": "f73dd8a7-d71e-4cd2-9b99-229ba48f89fa"
+                            },
+                            {
+                                "command": "EVENT_IF_VALUE",
+                                "args": {
+                                    "variable": "2",
+                                    "operator": "==",
+                                    "comparator": 1,
+                                    "__collapseElse": false
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                            "args": {
+                                                "__scriptTabs": "text",
+                                                "text": [
+                                                    "\\007\\002Detective, how is the\ninvestigation going?"
+                                                ],
+                                                "nameTag": "\\007\\002HALE",
+                                                "nameX": 2,
+                                                "avatarType": "small",
+                                                "avatarId": "",
+                                                "largeAvatar": "",
+                                                "avatarX": 2,
+                                                "avatarY": 2,
+                                                "avatarWidth": 3,
+                                                "orientation": "left",
+                                                "__collapse": false
+                                            },
+                                            "id": "2fa4fc69-42d6-456d-ae96-8fbce28861fb"
+                                        },
+                                        {
+                                            "command": "EVENT_DEC_VALUE",
+                                            "args": {
+                                                "variable": "3",
+                                                "__collapse": true
+                                            },
+                                            "id": "f310fe47-f428-4272-ab81-9a2be4e8003a"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                            "args": {
+                                                "__scriptTabs": "text",
+                                                "text": [
+                                                    "\\007\\002Detective, how is the\ninvestigation going?"
+                                                ],
+                                                "nameTag": "\\007\\002HALE",
+                                                "nameX": 2,
+                                                "avatarType": "small",
+                                                "avatarId": "",
+                                                "largeAvatar": "",
+                                                "avatarX": 2,
+                                                "avatarY": 2,
+                                                "avatarWidth": 3,
+                                                "orientation": "left",
+                                                "__collapse": false
+                                            },
+                                            "id": "2b72e880-b9d1-4095-9db0-e1778057031d"
+                                        }
+                                    ]
+                                },
+                                "id": "d764b16e-ff88-40d5-aa61-e887faf7781e"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "command": "EVENT_IF_VALUE",
+                                "args": {
+                                    "variable": "1",
+                                    "operator": "==",
+                                    "comparator": 1,
+                                    "__collapseElse": false
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                            "args": {
+                                                "__scriptTabs": "text",
+                                                "text": [
+                                                    "\\007\\002Detective, how is the\ninvestigation going?"
+                                                ],
+                                                "nameTag": "\\007\\002HALE",
+                                                "nameX": 2,
+                                                "avatarType": "small",
+                                                "avatarId": "",
+                                                "largeAvatar": "",
+                                                "avatarX": 2,
+                                                "avatarY": 2,
+                                                "avatarWidth": 3,
+                                                "orientation": "left",
+                                                "__collapse": false
+                                            },
+                                            "id": "541d8fca-885e-4a9a-a9ae-3fc4b9e70d96"
+                                        },
+                                        {
+                                            "command": "EVENT_MENU",
+                                            "args": {
+                                                "variable": "2",
+                                                "items": 2,
+                                                "option1": "\\007\\002° Is everything okay?",
+                                                "option2": "\\007\\002Fine",
+                                                "option3": "",
+                                                "option4": "",
+                                                "option5": "",
+                                                "option6": "",
+                                                "option7": "",
+                                                "option8": "",
+                                                "cancelOnB": true,
+                                                "layout": "dialogue",
+                                                "cancelOnLastOption": true
+                                            },
+                                            "id": "127bc5a9-5433-4512-a771-fd1158519c9c"
+                                        },
+                                        {
+                                            "command": "EVENT_IF_VALUE",
+                                            "args": {
+                                                "variable": "2",
+                                                "operator": "==",
+                                                "comparator": 1,
+                                                "__collapseElse": false
+                                            },
+                                            "children": {
+                                                "true": [
+                                                    {
+                                                        "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                        "args": {
+                                                            "__scriptTabs": "text",
+                                                            "text": [
+                                                                "\\007\\002Detective, how is the\ninvestigation going?"
+                                                            ],
+                                                            "nameTag": "\\007\\002HALE",
+                                                            "nameX": 2,
+                                                            "avatarType": "small",
+                                                            "avatarId": "",
+                                                            "largeAvatar": "",
+                                                            "avatarX": 2,
+                                                            "avatarY": 2,
+                                                            "avatarWidth": 3,
+                                                            "orientation": "left",
+                                                            "__collapse": false
+                                                        },
+                                                        "id": "85a1ba40-5474-4f73-a0f4-6e35cd161764"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_INC_VALUE",
+                                                        "args": {
+                                                            "variable": "3"
+                                                        },
+                                                        "id": "452ea35e-1e42-477e-9bdb-b7c522ffa541"
+                                                    }
+                                                ],
+                                                "false": [
+                                                    {
+                                                        "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                        "args": {
+                                                            "__scriptTabs": "text",
+                                                            "text": [
+                                                                "\\007\\002Detective, how is the\ninvestigation going?"
+                                                            ],
+                                                            "nameTag": "\\007\\002HALE",
+                                                            "nameX": 2,
+                                                            "avatarType": "small",
+                                                            "avatarId": "",
+                                                            "largeAvatar": "",
+                                                            "avatarX": 2,
+                                                            "avatarY": 2,
+                                                            "avatarWidth": 3,
+                                                            "orientation": "left",
+                                                            "__collapse": false
+                                                        },
+                                                        "id": "bc07a7bb-f427-48a7-ada2-421afe97f507"
+                                                    }
+                                                ]
+                                            },
+                                            "id": "1a6e45a0-363d-4c66-b565-1788325e1c88"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                            "args": {
+                                                "__scriptTabs": "text",
+                                                "text": [
+                                                    "\\007\\002Detective, how is the\ninvestigation going?"
+                                                ],
+                                                "nameTag": "\\007\\002HALE",
+                                                "nameX": 2,
+                                                "avatarType": "small",
+                                                "avatarId": "",
+                                                "largeAvatar": "",
+                                                "avatarX": 2,
+                                                "avatarY": 2,
+                                                "avatarWidth": 3,
+                                                "orientation": "left",
+                                                "__collapse": false
+                                            },
+                                            "id": "d756a788-7ee9-408d-ad0e-4d277953ad87"
+                                        }
+                                    ]
+                                },
+                                "id": "097d4450-4b9e-4bc3-88e8-92d657dc7103"
+                            }
+                        ]
+                    },
+                    "id": "be4306bf-4096-4c7d-9138-11b99964dc7b"
+                }
+            ]
+        },
+        {
+            "id": "f60b6107-2614-412c-9d95-af8bd51810ae",
+            "name": "MissOak2Initial",
+            "description": "After meeting everyone and obtaining the Hale Flustered evidence",
+            "variables": {
+                "0": {
+                    "id": "0",
+                    "name": "SkillPugilism"
+                },
+                "1": {
+                    "id": "1",
+                    "name": "SkillForbearance"
+                },
+                "2": {
+                    "id": "2",
+                    "name": "Local 0"
+                },
+                "3": {
+                    "id": "3",
+                    "name": "FriendshipMissOak"
+                }
+            },
+            "actors": {},
+            "script": [
+                {
+                    "command": "EVENT_IF_VALUE",
+                    "args": {
+                        "variable": "0",
+                        "operator": "==",
+                        "comparator": 1,
+                        "__collapseElse": false
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                "args": {
+                                    "__scriptTabs": "text",
+                                    "text": [
+                                        "\\007\\002Detective, how is the\ninvestigation going?"
+                                    ],
+                                    "nameTag": "\\007\\002HALE",
+                                    "nameX": 2,
+                                    "avatarType": "small",
+                                    "avatarId": "",
+                                    "largeAvatar": "",
+                                    "avatarX": 2,
+                                    "avatarY": 2,
+                                    "avatarWidth": 3,
+                                    "orientation": "left",
+                                    "__collapse": false
+                                },
+                                "id": "14f16852-278f-4f5f-be94-8557bc6e46fe"
+                            },
+                            {
+                                "command": "EVENT_MENU",
+                                "args": {
+                                    "variable": "2",
+                                    "items": 2,
+                                    "option1": "\\007\\002§ I can't divulge.",
+                                    "option2": "\\007\\002Fine",
+                                    "option3": "",
+                                    "option4": "",
+                                    "option5": "",
+                                    "option6": "",
+                                    "option7": "",
+                                    "option8": "",
+                                    "cancelOnB": true,
+                                    "layout": "dialogue",
+                                    "cancelOnLastOption": true
+                                },
+                                "id": "c36f6ef7-90cf-4230-91f1-a1e95c0751d0"
+                            },
+                            {
+                                "command": "EVENT_IF_VALUE",
+                                "args": {
+                                    "variable": "2",
+                                    "operator": "==",
+                                    "comparator": 1,
+                                    "__collapseElse": false
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                            "args": {
+                                                "__scriptTabs": "text",
+                                                "text": [
+                                                    "\\007\\002Detective, how is the\ninvestigation going?"
+                                                ],
+                                                "nameTag": "\\007\\002HALE",
+                                                "nameX": 2,
+                                                "avatarType": "small",
+                                                "avatarId": "",
+                                                "largeAvatar": "",
+                                                "avatarX": 2,
+                                                "avatarY": 2,
+                                                "avatarWidth": 3,
+                                                "orientation": "left",
+                                                "__collapse": false
+                                            },
+                                            "id": "920ad256-ff55-4da9-9a7e-a78bfa021134"
+                                        },
+                                        {
+                                            "command": "EVENT_DEC_VALUE",
+                                            "args": {
+                                                "variable": "3",
+                                                "__collapse": true
+                                            },
+                                            "id": "84142ea7-f758-4461-95d4-bdaefe3101be"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                            "args": {
+                                                "__scriptTabs": "text",
+                                                "text": [
+                                                    "\\007\\002Detective, how is the\ninvestigation going?"
+                                                ],
+                                                "nameTag": "\\007\\002HALE",
+                                                "nameX": 2,
+                                                "avatarType": "small",
+                                                "avatarId": "",
+                                                "largeAvatar": "",
+                                                "avatarX": 2,
+                                                "avatarY": 2,
+                                                "avatarWidth": 3,
+                                                "orientation": "left",
+                                                "__collapse": false
+                                            },
+                                            "id": "d5d4514d-4845-424a-a847-39d15a9c0c3f"
+                                        }
+                                    ]
+                                },
+                                "id": "e54e3b2c-5bb0-4529-88fd-132cd7b77e77"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "command": "EVENT_IF_VALUE",
+                                "args": {
+                                    "variable": "1",
+                                    "operator": "==",
+                                    "comparator": 1,
+                                    "__collapseElse": false
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                            "args": {
+                                                "__scriptTabs": "text",
+                                                "text": [
+                                                    "\\007\\002Detective, how is the\ninvestigation going?"
+                                                ],
+                                                "nameTag": "\\007\\002HALE",
+                                                "nameX": 2,
+                                                "avatarType": "small",
+                                                "avatarId": "",
+                                                "largeAvatar": "",
+                                                "avatarX": 2,
+                                                "avatarY": 2,
+                                                "avatarWidth": 3,
+                                                "orientation": "left",
+                                                "__collapse": false
+                                            },
+                                            "id": "a0837287-cf15-4b1e-96da-1430b1d50bc8"
+                                        },
+                                        {
+                                            "command": "EVENT_MENU",
+                                            "args": {
+                                                "variable": "2",
+                                                "items": 2,
+                                                "option1": "\\007\\002° Is everything okay?",
+                                                "option2": "\\007\\002Fine",
+                                                "option3": "",
+                                                "option4": "",
+                                                "option5": "",
+                                                "option6": "",
+                                                "option7": "",
+                                                "option8": "",
+                                                "cancelOnB": true,
+                                                "layout": "dialogue",
+                                                "cancelOnLastOption": true
+                                            },
+                                            "id": "bed82778-bb5d-49de-9f4f-e19b1e0a572c"
+                                        },
+                                        {
+                                            "command": "EVENT_IF_VALUE",
+                                            "args": {
+                                                "variable": "2",
+                                                "operator": "==",
+                                                "comparator": 1,
+                                                "__collapseElse": false
+                                            },
+                                            "children": {
+                                                "true": [
+                                                    {
+                                                        "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                        "args": {
+                                                            "__scriptTabs": "text",
+                                                            "text": [
+                                                                "\\007\\002Detective, how is the\ninvestigation going?"
+                                                            ],
+                                                            "nameTag": "\\007\\002HALE",
+                                                            "nameX": 2,
+                                                            "avatarType": "small",
+                                                            "avatarId": "",
+                                                            "largeAvatar": "",
+                                                            "avatarX": 2,
+                                                            "avatarY": 2,
+                                                            "avatarWidth": 3,
+                                                            "orientation": "left",
+                                                            "__collapse": false
+                                                        },
+                                                        "id": "c3fbc954-977f-400e-babf-8edfa35c3333"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_INC_VALUE",
+                                                        "args": {
+                                                            "variable": "3"
+                                                        },
+                                                        "id": "8e7c8020-57c0-46ae-aa3b-7f6ae09756e2"
+                                                    }
+                                                ],
+                                                "false": [
+                                                    {
+                                                        "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                        "args": {
+                                                            "__scriptTabs": "text",
+                                                            "text": [
+                                                                "\\007\\002Detective, how is the\ninvestigation going?"
+                                                            ],
+                                                            "nameTag": "\\007\\002HALE",
+                                                            "nameX": 2,
+                                                            "avatarType": "small",
+                                                            "avatarId": "",
+                                                            "largeAvatar": "",
+                                                            "avatarX": 2,
+                                                            "avatarY": 2,
+                                                            "avatarWidth": 3,
+                                                            "orientation": "left",
+                                                            "__collapse": false
+                                                        },
+                                                        "id": "790b75eb-f6b1-4f69-9772-365004f9ed68"
+                                                    }
+                                                ]
+                                            },
+                                            "id": "d1bde520-b93a-423f-bb54-3d811f7ef38a"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                            "args": {
+                                                "__scriptTabs": "text",
+                                                "text": [
+                                                    "\\007\\002Detective, how is the\ninvestigation going?"
+                                                ],
+                                                "nameTag": "\\007\\002HALE",
+                                                "nameX": 2,
+                                                "avatarType": "small",
+                                                "avatarId": "",
+                                                "largeAvatar": "",
+                                                "avatarX": 2,
+                                                "avatarY": 2,
+                                                "avatarWidth": 3,
+                                                "orientation": "left",
+                                                "__collapse": false
+                                            },
+                                            "id": "4586a004-37d5-4351-930c-79e746b6bbf9"
+                                        }
+                                    ]
+                                },
+                                "id": "2967fcfd-51f7-4f50-bd38-31b3297086b8"
+                            }
+                        ]
+                    },
+                    "id": "6fe0d0c0-9064-4cb3-a048-03aef88cc05a"
+                }
+            ]
+        },
+        {
+            "id": "4fbf748e-7a94-4b07-8fb6-83d1ed2c6c8d",
+            "name": "Rory2Initial",
+            "description": "After meeting everyone and obtaining the Hale Flustered evidence",
+            "variables": {
+                "0": {
+                    "id": "0",
+                    "name": "SkillPugilism"
+                },
+                "1": {
+                    "id": "1",
+                    "name": "SkillForbearance"
+                },
+                "2": {
+                    "id": "2",
+                    "name": "Local 0"
+                },
+                "3": {
+                    "id": "3",
+                    "name": "FriendshipRory"
+                }
+            },
+            "actors": {},
+            "script": [
+                {
+                    "command": "EVENT_IF_VALUE",
+                    "args": {
+                        "variable": "0",
+                        "operator": "==",
+                        "comparator": 1,
+                        "__collapseElse": false
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                "args": {
+                                    "__scriptTabs": "text",
+                                    "text": [
+                                        "\\007\\002Detective, how is the\ninvestigation going?"
+                                    ],
+                                    "nameTag": "\\007\\002HALE",
+                                    "nameX": 2,
+                                    "avatarType": "small",
+                                    "avatarId": "",
+                                    "largeAvatar": "",
+                                    "avatarX": 2,
+                                    "avatarY": 2,
+                                    "avatarWidth": 3,
+                                    "orientation": "left",
+                                    "__collapse": false
+                                },
+                                "id": "4a07f092-4369-41ee-99d8-dfdde2d5a0c4"
+                            },
+                            {
+                                "command": "EVENT_MENU",
+                                "args": {
+                                    "variable": "2",
+                                    "items": 2,
+                                    "option1": "\\007\\002§ I can't divulge.",
+                                    "option2": "\\007\\002Fine",
+                                    "option3": "",
+                                    "option4": "",
+                                    "option5": "",
+                                    "option6": "",
+                                    "option7": "",
+                                    "option8": "",
+                                    "cancelOnB": true,
+                                    "layout": "dialogue",
+                                    "cancelOnLastOption": true
+                                },
+                                "id": "1fa5e54b-8b49-4928-b690-baee489219e7"
+                            },
+                            {
+                                "command": "EVENT_IF_VALUE",
+                                "args": {
+                                    "variable": "2",
+                                    "operator": "==",
+                                    "comparator": 1,
+                                    "__collapseElse": false
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                            "args": {
+                                                "__scriptTabs": "text",
+                                                "text": [
+                                                    "\\007\\002Detective, how is the\ninvestigation going?"
+                                                ],
+                                                "nameTag": "\\007\\002HALE",
+                                                "nameX": 2,
+                                                "avatarType": "small",
+                                                "avatarId": "",
+                                                "largeAvatar": "",
+                                                "avatarX": 2,
+                                                "avatarY": 2,
+                                                "avatarWidth": 3,
+                                                "orientation": "left",
+                                                "__collapse": false
+                                            },
+                                            "id": "58820369-fcac-4cff-8c51-0f814d4f5147"
+                                        },
+                                        {
+                                            "command": "EVENT_DEC_VALUE",
+                                            "args": {
+                                                "variable": "3",
+                                                "__collapse": true
+                                            },
+                                            "id": "f96f41ea-7d07-47c5-be54-9d965cd7c667"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                            "args": {
+                                                "__scriptTabs": "text",
+                                                "text": [
+                                                    "\\007\\002Detective, how is the\ninvestigation going?"
+                                                ],
+                                                "nameTag": "\\007\\002HALE",
+                                                "nameX": 2,
+                                                "avatarType": "small",
+                                                "avatarId": "",
+                                                "largeAvatar": "",
+                                                "avatarX": 2,
+                                                "avatarY": 2,
+                                                "avatarWidth": 3,
+                                                "orientation": "left",
+                                                "__collapse": false
+                                            },
+                                            "id": "d12584d8-14a4-45ff-bae1-9443b49f3281"
+                                        }
+                                    ]
+                                },
+                                "id": "f9ef0ddc-8e21-4069-a55d-cb05bc9d384a"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "command": "EVENT_IF_VALUE",
+                                "args": {
+                                    "variable": "1",
+                                    "operator": "==",
+                                    "comparator": 1,
+                                    "__collapseElse": false
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                            "args": {
+                                                "__scriptTabs": "text",
+                                                "text": [
+                                                    "\\007\\002Detective, how is the\ninvestigation going?"
+                                                ],
+                                                "nameTag": "\\007\\002HALE",
+                                                "nameX": 2,
+                                                "avatarType": "small",
+                                                "avatarId": "",
+                                                "largeAvatar": "",
+                                                "avatarX": 2,
+                                                "avatarY": 2,
+                                                "avatarWidth": 3,
+                                                "orientation": "left",
+                                                "__collapse": false
+                                            },
+                                            "id": "ba5b2e88-ea66-441d-8fcb-1a2f768c4b51"
+                                        },
+                                        {
+                                            "command": "EVENT_MENU",
+                                            "args": {
+                                                "variable": "2",
+                                                "items": 2,
+                                                "option1": "\\007\\002° Is everything okay?",
+                                                "option2": "\\007\\002Fine",
+                                                "option3": "",
+                                                "option4": "",
+                                                "option5": "",
+                                                "option6": "",
+                                                "option7": "",
+                                                "option8": "",
+                                                "cancelOnB": true,
+                                                "layout": "dialogue",
+                                                "cancelOnLastOption": true
+                                            },
+                                            "id": "77661e40-5506-4e54-8c72-dc04fb742464"
+                                        },
+                                        {
+                                            "command": "EVENT_IF_VALUE",
+                                            "args": {
+                                                "variable": "2",
+                                                "operator": "==",
+                                                "comparator": 1,
+                                                "__collapseElse": false
+                                            },
+                                            "children": {
+                                                "true": [
+                                                    {
+                                                        "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                        "args": {
+                                                            "__scriptTabs": "text",
+                                                            "text": [
+                                                                "\\007\\002Detective, how is the\ninvestigation going?"
+                                                            ],
+                                                            "nameTag": "\\007\\002HALE",
+                                                            "nameX": 2,
+                                                            "avatarType": "small",
+                                                            "avatarId": "",
+                                                            "largeAvatar": "",
+                                                            "avatarX": 2,
+                                                            "avatarY": 2,
+                                                            "avatarWidth": 3,
+                                                            "orientation": "left",
+                                                            "__collapse": false
+                                                        },
+                                                        "id": "747ead25-fffe-469c-a764-bcd606fbb9e1"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_INC_VALUE",
+                                                        "args": {
+                                                            "variable": "3",
+                                                            "__collapse": true
+                                                        },
+                                                        "id": "1a5b1797-1169-4567-87c4-dd0b9608b784"
+                                                    }
+                                                ],
+                                                "false": [
+                                                    {
+                                                        "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                        "args": {
+                                                            "__scriptTabs": "text",
+                                                            "text": [
+                                                                "\\007\\002Detective, how is the\ninvestigation going?"
+                                                            ],
+                                                            "nameTag": "\\007\\002HALE",
+                                                            "nameX": 2,
+                                                            "avatarType": "small",
+                                                            "avatarId": "",
+                                                            "largeAvatar": "",
+                                                            "avatarX": 2,
+                                                            "avatarY": 2,
+                                                            "avatarWidth": 3,
+                                                            "orientation": "left",
+                                                            "__collapse": false
+                                                        },
+                                                        "id": "2efe3955-9e28-4937-a597-e66e6968788f"
+                                                    }
+                                                ]
+                                            },
+                                            "id": "7e8c748e-91d7-472e-8990-45df80cc7ca5"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                            "args": {
+                                                "__scriptTabs": "text",
+                                                "text": [
+                                                    "\\007\\002Detective, how is the\ninvestigation going?"
+                                                ],
+                                                "nameTag": "\\007\\002HALE",
+                                                "nameX": 2,
+                                                "avatarType": "small",
+                                                "avatarId": "",
+                                                "largeAvatar": "",
+                                                "avatarX": 2,
+                                                "avatarY": 2,
+                                                "avatarWidth": 3,
+                                                "orientation": "left",
+                                                "__collapse": false
+                                            },
+                                            "id": "3f54279a-9982-4cd3-ace8-6adf4f9cc40f"
+                                        }
+                                    ]
+                                },
+                                "id": "68d357b9-017c-41df-b90c-be194774631c"
+                            }
+                        ]
+                    },
+                    "id": "3f8367f2-c88a-4782-8cef-1abfcedf5bb1"
+                }
+            ]
+        },
+        {
+            "id": "c7c3a53f-c94e-40f8-a3d4-e3ad8d5e8f6a",
+            "name": "Lindy2Initial",
+            "description": "After meeting everyone and obtaining the Hale Flustered evidence",
+            "variables": {
+                "0": {
+                    "id": "0",
+                    "name": "SkillPugilism"
+                },
+                "1": {
+                    "id": "1",
+                    "name": "SkillForbearance"
+                },
+                "2": {
+                    "id": "2",
+                    "name": "Local 0"
+                },
+                "3": {
+                    "id": "3",
+                    "name": "FriendshipMissOak"
+                }
+            },
+            "actors": {},
+            "script": [
+                {
+                    "command": "EVENT_IF_VALUE",
+                    "args": {
+                        "variable": "0",
+                        "operator": "==",
+                        "comparator": 1,
+                        "__collapseElse": false
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                "args": {
+                                    "__scriptTabs": "text",
+                                    "text": [
+                                        "\\007\\002Detective, how is the\ninvestigation going?"
+                                    ],
+                                    "nameTag": "\\007\\002HALE",
+                                    "nameX": 2,
+                                    "avatarType": "small",
+                                    "avatarId": "",
+                                    "largeAvatar": "",
+                                    "avatarX": 2,
+                                    "avatarY": 2,
+                                    "avatarWidth": 3,
+                                    "orientation": "left",
+                                    "__collapse": false
+                                },
+                                "id": "589303a0-af42-4fe3-b6e9-87f425e0178f"
+                            },
+                            {
+                                "command": "EVENT_MENU",
+                                "args": {
+                                    "variable": "2",
+                                    "items": 2,
+                                    "option1": "\\007\\002§ I can't divulge.",
+                                    "option2": "\\007\\002Fine",
+                                    "option3": "",
+                                    "option4": "",
+                                    "option5": "",
+                                    "option6": "",
+                                    "option7": "",
+                                    "option8": "",
+                                    "cancelOnB": true,
+                                    "layout": "dialogue",
+                                    "cancelOnLastOption": true
+                                },
+                                "id": "a045923c-3763-4c58-a7bd-b6ec1c481565"
+                            },
+                            {
+                                "command": "EVENT_IF_VALUE",
+                                "args": {
+                                    "variable": "2",
+                                    "operator": "==",
+                                    "comparator": 1,
+                                    "__collapseElse": false
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                            "args": {
+                                                "__scriptTabs": "text",
+                                                "text": [
+                                                    "\\007\\002Detective, how is the\ninvestigation going?"
+                                                ],
+                                                "nameTag": "\\007\\002HALE",
+                                                "nameX": 2,
+                                                "avatarType": "small",
+                                                "avatarId": "",
+                                                "largeAvatar": "",
+                                                "avatarX": 2,
+                                                "avatarY": 2,
+                                                "avatarWidth": 3,
+                                                "orientation": "left",
+                                                "__collapse": false
+                                            },
+                                            "id": "8198c019-f839-42fd-bc6d-d8f3725af9d6"
+                                        },
+                                        {
+                                            "command": "EVENT_DEC_VALUE",
+                                            "args": {
+                                                "variable": "3",
+                                                "__collapse": true
+                                            },
+                                            "id": "e06ee9d6-dadd-4407-b094-41e0f9cf3c8d"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                            "args": {
+                                                "__scriptTabs": "text",
+                                                "text": [
+                                                    "\\007\\002Detective, how is the\ninvestigation going?"
+                                                ],
+                                                "nameTag": "\\007\\002HALE",
+                                                "nameX": 2,
+                                                "avatarType": "small",
+                                                "avatarId": "",
+                                                "largeAvatar": "",
+                                                "avatarX": 2,
+                                                "avatarY": 2,
+                                                "avatarWidth": 3,
+                                                "orientation": "left",
+                                                "__collapse": false
+                                            },
+                                            "id": "2adeda6e-2879-4860-a339-4e26d3563ef6"
+                                        }
+                                    ]
+                                },
+                                "id": "1280526f-fb23-4f9f-9959-fef2a0c6a0be"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "command": "EVENT_IF_VALUE",
+                                "args": {
+                                    "variable": "1",
+                                    "operator": "==",
+                                    "comparator": 1,
+                                    "__collapseElse": false
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                            "args": {
+                                                "__scriptTabs": "text",
+                                                "text": [
+                                                    "\\007\\002Detective, how is the\ninvestigation going?"
+                                                ],
+                                                "nameTag": "\\007\\002HALE",
+                                                "nameX": 2,
+                                                "avatarType": "small",
+                                                "avatarId": "",
+                                                "largeAvatar": "",
+                                                "avatarX": 2,
+                                                "avatarY": 2,
+                                                "avatarWidth": 3,
+                                                "orientation": "left",
+                                                "__collapse": false
+                                            },
+                                            "id": "586d021c-f09c-4681-a32f-84f34419181e"
+                                        },
+                                        {
+                                            "command": "EVENT_MENU",
+                                            "args": {
+                                                "variable": "2",
+                                                "items": 2,
+                                                "option1": "\\007\\002° Is everything okay?",
+                                                "option2": "\\007\\002Fine",
+                                                "option3": "",
+                                                "option4": "",
+                                                "option5": "",
+                                                "option6": "",
+                                                "option7": "",
+                                                "option8": "",
+                                                "cancelOnB": true,
+                                                "layout": "dialogue",
+                                                "cancelOnLastOption": true
+                                            },
+                                            "id": "3452e503-2156-424d-9729-dfb6251f6e02"
+                                        },
+                                        {
+                                            "command": "EVENT_IF_VALUE",
+                                            "args": {
+                                                "variable": "2",
+                                                "operator": "==",
+                                                "comparator": 1,
+                                                "__collapseElse": false
+                                            },
+                                            "children": {
+                                                "true": [
+                                                    {
+                                                        "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                        "args": {
+                                                            "__scriptTabs": "text",
+                                                            "text": [
+                                                                "\\007\\002Detective, how is the\ninvestigation going?"
+                                                            ],
+                                                            "nameTag": "\\007\\002HALE",
+                                                            "nameX": 2,
+                                                            "avatarType": "small",
+                                                            "avatarId": "",
+                                                            "largeAvatar": "",
+                                                            "avatarX": 2,
+                                                            "avatarY": 2,
+                                                            "avatarWidth": 3,
+                                                            "orientation": "left",
+                                                            "__collapse": false
+                                                        },
+                                                        "id": "e50537a9-66bf-4982-bbb9-9c2dcadf75e5"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_INC_VALUE",
+                                                        "args": {
+                                                            "variable": "3"
+                                                        },
+                                                        "id": "5c95a4c6-bce4-4db7-879e-69eb36c6091d"
+                                                    }
+                                                ],
+                                                "false": [
+                                                    {
+                                                        "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                        "args": {
+                                                            "__scriptTabs": "text",
+                                                            "text": [
+                                                                "\\007\\002Detective, how is the\ninvestigation going?"
+                                                            ],
+                                                            "nameTag": "\\007\\002HALE",
+                                                            "nameX": 2,
+                                                            "avatarType": "small",
+                                                            "avatarId": "",
+                                                            "largeAvatar": "",
+                                                            "avatarX": 2,
+                                                            "avatarY": 2,
+                                                            "avatarWidth": 3,
+                                                            "orientation": "left",
+                                                            "__collapse": false
+                                                        },
+                                                        "id": "d9986eaa-5601-4a62-80e1-08cbea54316c"
+                                                    }
+                                                ]
+                                            },
+                                            "id": "cfa5bbd6-e4f7-40a0-a0e8-f5a3ce3c5ada"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                            "args": {
+                                                "__scriptTabs": "text",
+                                                "text": [
+                                                    "\\007\\002Detective, how is the\ninvestigation going?"
+                                                ],
+                                                "nameTag": "\\007\\002HALE",
+                                                "nameX": 2,
+                                                "avatarType": "small",
+                                                "avatarId": "",
+                                                "largeAvatar": "",
+                                                "avatarX": 2,
+                                                "avatarY": 2,
+                                                "avatarWidth": 3,
+                                                "orientation": "left",
+                                                "__collapse": false
+                                            },
+                                            "id": "51b651a7-e0f5-41f2-83d5-8794641c5999"
+                                        }
+                                    ]
+                                },
+                                "id": "1658af80-ad41-45fb-ac45-e0b1be9fe0c1"
+                            }
+                        ]
+                    },
+                    "id": "5686e927-e3d9-4d66-b743-198da8269c45"
+                }
+            ]
         }
     ],
     "music": [
@@ -19634,11 +21125,7 @@
         },
         {
             "id": "9",
-            "name": "Quest10"
-        },
-        {
-            "id": "10",
-            "name": "Quest11"
+            "name": "TalkEveryone2"
         },
         {
             "id": "11",
@@ -19695,6 +21182,10 @@
         {
             "id": "4912bee2-387a-472f-ae4f-6679b6149517__L0",
             "name": "Menu Choice"
+        },
+        {
+            "id": "10",
+            "name": "MetHale2"
         }
     ],
     "engineFieldValues": [
@@ -19713,7 +21204,7 @@
         "showCollisions": true,
         "showConnections": true,
         "worldScrollX": 1086.800048828125,
-        "worldScrollY": 527.2000122070312,
+        "worldScrollY": 370,
         "zoom": 100,
         "customColorsEnabled": true,
         "sgbEnabled": false,
