@@ -2934,6 +2934,13 @@
                     }
                 },
                 {
+                    "command": "EVENT_SET_TRUE",
+                    "args": {
+                        "variable": "14"
+                    },
+                    "id": "b9be90b6-c3da-4d9c-908a-ee8176b3d6cf"
+                },
+                {
                     "command": "EVENT_ACTOR_HIDE",
                     "args": {
                         "actorId": "$self$"
@@ -3186,6 +3193,40 @@
                                 "avatarId": ""
                             },
                             "id": "bf7dc1b6-5ab7-4f5a-936e-ef2a9c055cee"
+                        },
+                        {
+                            "command": "EVENT_IF_VALUE",
+                            "args": {
+                                "variable": "20",
+                                "operator": "==",
+                                "comparator": "0",
+                                "__collapseElse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                        "args": {
+                                            "customEventId": "e3164853-1945-42b8-9578-3129cd7f9184",
+                                            "$variable[0]$": "20"
+                                        },
+                                        "id": "33345472-baa9-4b7d-84c7-055d08b5bc2c"
+                                    },
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "\\007\\002Evidence obtained:\nScuffled Dirt"
+                                            ],
+                                            "avatarId": "",
+                                            "__collapse": false
+                                        },
+                                        "id": "b0692c73-69c7-407c-95ec-96326e76fa3d"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "71b01db5-626b-460d-b6df-cd1848733cf3"
                         }
                     ],
                     "leaveScript": []
@@ -6366,7 +6407,7 @@
             "collisions": [],
             "autoFadeSpeed": 1,
             "id": "2858edef-5d44-453d-8f9f-ccad1ae43250",
-            "x": 1408.4150897331956,
+            "x": 1409.4150897331956,
             "y": 876.9131197893812,
             "actors": [
                 {
@@ -6628,7 +6669,8 @@
                                                 "$variable[4]$": "15",
                                                 "$variable[5]$": "L3",
                                                 "$variable[6]$": "17",
-                                                "__collapse": true
+                                                "__collapse": false,
+                                                "$variable[7]$": "11"
                                             },
                                             "id": "5fb3cdf4-e09c-495b-832b-4c7116324e3f"
                                         }
@@ -17592,7 +17634,7 @@
                                 "args": {
                                     "variable": "0",
                                     "operator": "==",
-                                    "comparator": "0",
+                                    "comparator": 1,
                                     "__collapseElse": true
                                 },
                                 "children": {
@@ -17683,6 +17725,10 @@
                 "6": {
                     "id": "6",
                     "name": "FriendshipHale"
+                },
+                "7": {
+                    "id": "7",
+                    "name": "EvidenceRoryAlibi"
                 }
             },
             "actors": {},
@@ -17788,7 +17834,7 @@
                                     "operator": "==",
                                     "comparator": 1,
                                     "__collapseElse": true,
-                                    "__collapse": true,
+                                    "__collapse": false,
                                     "__disableElse": true
                                 },
                                 "children": {
@@ -17820,6 +17866,42 @@
                                                 "__collapse": false
                                             },
                                             "id": "7ccc4bfd-d62b-4820-95bd-a429d21ab630"
+                                        },
+                                        {
+                                            "command": "EVENT_IF_VALUE",
+                                            "args": {
+                                                "variable": "7",
+                                                "operator": "==",
+                                                "comparator": "0",
+                                                "__collapseElse": true,
+                                                "__disableElse": true
+                                            },
+                                            "children": {
+                                                "true": [
+                                                    {
+                                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                                        "args": {
+                                                            "customEventId": "e3164853-1945-42b8-9578-3129cd7f9184",
+                                                            "$variable[0]$": "7",
+                                                            "__collapse": false
+                                                        },
+                                                        "id": "3e1495c5-0644-4267-96c1-4b9c6a508117"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_TEXT",
+                                                        "args": {
+                                                            "text": [
+                                                                "\\007\\002Evidence obtained:\nRory's Alibi"
+                                                            ],
+                                                            "avatarId": "",
+                                                            "__collapse": false
+                                                        },
+                                                        "id": "e5a78a25-9d33-4764-b933-340d9a98a304"
+                                                    }
+                                                ],
+                                                "false": []
+                                            },
+                                            "id": "31a5b5ff-45f5-4df7-8ab7-dc92c869b8dd"
                                         }
                                     ],
                                     "false": []
@@ -18723,7 +18805,7 @@
                                     "operator": "==",
                                     "comparator": 1,
                                     "__collapseElse": true,
-                                    "__collapse": true,
+                                    "__collapse": false,
                                     "__disableElse": true
                                 },
                                 "children": {
@@ -18769,8 +18851,8 @@
                                                         "command": "EVENT_CALL_CUSTOM_EVENT",
                                                         "args": {
                                                             "customEventId": "e3164853-1945-42b8-9578-3129cd7f9184",
-                                                            "$variable[0]$": "18",
-                                                            "__collapse": true
+                                                            "$variable[0]$": "5",
+                                                            "__collapse": false
                                                         },
                                                         "id": "50a44973-93c5-432a-a94e-0e6ad9822698"
                                                     },
@@ -18781,7 +18863,7 @@
                                                                 "\\007\\002Evidence obtained:\nHale Flustered"
                                                             ],
                                                             "avatarId": "",
-                                                            "__collapse": true
+                                                            "__collapse": false
                                                         },
                                                         "id": "f89aa95b-4d3e-4bb3-b6b9-5febf07113b4"
                                                     }
@@ -22698,6 +22780,14 @@
             "name": "EvidenceHaleFlustered"
         },
         {
+            "id": "19",
+            "name": "EvidenceVeryLittleBlood"
+        },
+        {
+            "id": "20",
+            "name": "EvidenceScuffledDirt"
+        },
+        {
             "id": "871ea302-1cc1-463c-b9d7-530aac38fe81__L0",
             "name": "Spoken to gardener"
         },
@@ -22733,16 +22823,16 @@
         }
     ],
     "settings": {
-        "startSceneId": "4912bee2-387a-472f-ae4f-6679b6149517",
-        "startX": 1,
+        "startSceneId": "327f37aa-2b3a-4afc-b029-02352df2d6ea",
+        "startX": 4,
         "startY": 1,
         "startMoveSpeed": 1,
         "startAnimSpeed": 15,
         "startDirection": "right",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1086.800048828125,
-        "worldScrollY": 239.1999969482422,
+        "worldScrollX": 278.79998779296875,
+        "worldScrollY": 0,
         "zoom": 100,
         "customColorsEnabled": true,
         "sgbEnabled": false,
@@ -22771,11 +22861,11 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
+            692,
             30,
-            205,
-            517
+            30
         ],
-        "showNavigator": true,
+        "showNavigator": false,
         "defaultFontId": "0ee173e2-95a5-40e6-96e8-57f37dab3752",
         "defaultCharacterEncoding": "",
         "defaultPlayerSprites": {
