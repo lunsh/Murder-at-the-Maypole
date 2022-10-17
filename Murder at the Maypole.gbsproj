@@ -8716,7 +8716,7 @@
                                                                                                             },
                                                                                                             "$variable[V1]$": {
                                                                                                                 "type": "variable",
-                                                                                                                "value": "L2"
+                                                                                                                "value": "L1"
                                                                                                             }
                                                                                                         },
                                                                                                         "id": "3066f9bd-392b-490a-b994-063f79a71d5f"
@@ -9808,188 +9808,43 @@
                 {
                     "command": "EVENT_IF_VALUE",
                     "args": {
-                        "variable": "5",
+                        "variable": "56",
                         "operator": "==",
                         "comparator": "0",
-                        "__collapseElse": false,
-                        "__comment": false
+                        "__collapseElse": true
                     },
                     "children": {
                         "true": [
                             {
                                 "command": "EVENT_IF_VALUE",
                                 "args": {
-                                    "variable": "2",
+                                    "variable": "5",
                                     "operator": "==",
                                     "comparator": "0",
                                     "__collapseElse": false,
+                                    "__comment": false,
                                     "__collapse": false
-                                },
-                                "children": {
-                                    "true": [
-                                        {
-                                            "command": "EVENT_CALL_CUSTOM_EVENT",
-                                            "args": {
-                                                "customEventId": "39aa3dfb-fafa-4044-9b63-597fd4f2244f",
-                                                "__collapse": false
-                                            },
-                                            "id": "3cb2756d-8044-4bf0-a0d1-2f491a1832b0"
-                                        }
-                                    ],
-                                    "false": [
-                                        {
-                                            "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
-                                            "args": {
-                                                "__scriptTabs": "text",
-                                                "text": [
-                                                    "\\007\\002What can I do for\nyou, Detective?"
-                                                ],
-                                                "nameTag": "\\007\\002RORY",
-                                                "nameX": 2,
-                                                "avatarType": "small",
-                                                "avatarId": "",
-                                                "largeAvatar": "",
-                                                "avatarX": 2,
-                                                "avatarY": 2,
-                                                "avatarWidth": 3,
-                                                "orientation": "left",
-                                                "__collapse": false
-                                            },
-                                            "id": "b958c7dc-885a-4e77-81c2-dab28c696402"
-                                        }
-                                    ]
-                                },
-                                "id": "fc845fb0-de7b-4a2c-ae61-9cc6e1b3e213"
-                            },
-                            {
-                                "command": "EVENT_LOOP",
-                                "args": {
-                                    "__collapse": false
-                                },
-                                "children": {
-                                    "true": [
-                                        {
-                                            "command": "EVENT_MENU",
-                                            "args": {
-                                                "variable": "L0",
-                                                "items": 4,
-                                                "option1": "\\007\\002What happened here?",
-                                                "option2": "\\007\\002Who do you suspect?",
-                                                "option3": "\\007\\002What's your story?",
-                                                "option4": "\\007\\002Nothing right now",
-                                                "option5": "",
-                                                "option6": "",
-                                                "option7": "",
-                                                "option8": "",
-                                                "cancelOnB": true,
-                                                "layout": "dialogue",
-                                                "cancelOnLastOption": true,
-                                                "__collapse": true
-                                            },
-                                            "id": "aa640a97-8db2-413f-be5c-14da91ab62cf"
-                                        },
-                                        {
-                                            "command": "EVENT_CALL_CUSTOM_EVENT",
-                                            "args": {
-                                                "customEventId": "90e03f02-e1cf-4913-a818-3f4d81a9b616",
-                                                "__collapse": true,
-                                                "$variable[V0]$": {
-                                                    "type": "variable",
-                                                    "value": "L0"
-                                                }
-                                            },
-                                            "id": "cb6dff6c-15d1-4044-9b52-08b6083423b3"
-                                        },
-                                        {
-                                            "command": "EVENT_CALL_CUSTOM_EVENT",
-                                            "args": {
-                                                "customEventId": "88ef3cbc-5b72-46c9-8972-dea1e0d21ecb",
-                                                "$variable[V0]$": {
-                                                    "type": "variable",
-                                                    "value": "L0"
-                                                },
-                                                "$variable[V1]$": {
-                                                    "type": "variable",
-                                                    "value": "2"
-                                                },
-                                                "$variable[V2]$": {
-                                                    "type": "variable",
-                                                    "value": "13"
-                                                },
-                                                "$variable[V3]$": {
-                                                    "type": "variable",
-                                                    "value": "15"
-                                                },
-                                                "$variable[V4]$": {
-                                                    "type": "variable",
-                                                    "value": "L1"
-                                                },
-                                                "$variable[V5]$": {
-                                                    "type": "variable",
-                                                    "value": "L2"
-                                                },
-                                                "$variable[V6]$": {
-                                                    "type": "variable",
-                                                    "value": "7"
-                                                },
-                                                "__collapse": true
-                                            },
-                                            "id": "9849ebc7-579e-4c98-a967-bca82604229a"
-                                        }
-                                    ]
-                                },
-                                "id": "f0c45778-958d-421d-96c9-237e3adde5c4"
-                            }
-                        ],
-                        "false": [
-                            {
-                                "command": "EVENT_IF_VALUE",
-                                "args": {
-                                    "variable": "9",
-                                    "operator": "==",
-                                    "comparator": "0",
-                                    "__collapseElse": false
                                 },
                                 "children": {
                                     "true": [
                                         {
                                             "command": "EVENT_IF_VALUE",
                                             "args": {
-                                                "variable": "25",
+                                                "variable": "2",
                                                 "operator": "==",
                                                 "comparator": "0",
                                                 "__collapseElse": false,
-                                                "__collapse": true
+                                                "__collapse": false
                                             },
                                             "children": {
                                                 "true": [
                                                     {
                                                         "command": "EVENT_CALL_CUSTOM_EVENT",
                                                         "args": {
-                                                            "customEventId": "4fbf748e-7a94-4b07-8fb6-83d1ed2c6c8d",
-                                                            "$variable[V0]$": {
-                                                                "type": "variable",
-                                                                "value": "13"
-                                                            },
-                                                            "$variable[V1]$": {
-                                                                "type": "variable",
-                                                                "value": "15"
-                                                            },
-                                                            "$variable[V3]$": {
-                                                                "type": "variable",
-                                                                "value": "7"
-                                                            },
+                                                            "customEventId": "39aa3dfb-fafa-4044-9b63-597fd4f2244f",
                                                             "__collapse": false
                                                         },
-                                                        "id": "aa5561d3-ba79-4945-a737-5ebf42bbfd04"
-                                                    },
-                                                    {
-                                                        "command": "EVENT_SET_TRUE",
-                                                        "args": {
-                                                            "variable": "25",
-                                                            "__collapse": true
-                                                        },
-                                                        "id": "37d192d2-4223-4416-b8e0-6d2c0f0fd8f7"
+                                                        "id": "3cb2756d-8044-4bf0-a0d1-2f491a1832b0"
                                                     }
                                                 ],
                                                 "false": [
@@ -9998,7 +9853,7 @@
                                                         "args": {
                                                             "__scriptTabs": "text",
                                                             "text": [
-                                                                "\\007\\002What can I do for you,\nmy dear detective?"
+                                                                "\\007\\002What can I do for\nyou, Detective?"
                                                             ],
                                                             "nameTag": "\\007\\002RORY",
                                                             "nameX": 2,
@@ -10008,40 +9863,100 @@
                                                             "avatarX": 2,
                                                             "avatarY": 2,
                                                             "avatarWidth": 3,
-                                                            "orientation": "left"
+                                                            "orientation": "left",
+                                                            "__collapse": false
                                                         },
-                                                        "id": "cda05187-cd83-4e78-968b-57eb29e86aca"
+                                                        "id": "b958c7dc-885a-4e77-81c2-dab28c696402"
                                                     }
                                                 ]
                                             },
-                                            "id": "9a37297f-efa2-4b5f-a57b-e54033613390"
+                                            "id": "fc845fb0-de7b-4a2c-ae61-9cc6e1b3e213"
                                         },
                                         {
-                                            "command": "EVENT_CALL_CUSTOM_EVENT",
+                                            "command": "EVENT_LOOP",
                                             "args": {
-                                                "customEventId": "17b912fc-1509-43a0-8e00-5bfc328fb3f9",
-                                                "$variable[V1]$": {
-                                                    "type": "variable",
-                                                    "value": "11"
-                                                },
-                                                "$variable[V2]$": {
-                                                    "type": "variable",
-                                                    "value": "22"
-                                                },
-                                                "$variable[V3]$": {
-                                                    "type": "variable",
-                                                    "value": "L1"
-                                                },
-                                                "__collapse": true
+                                                "__collapse": false
                                             },
-                                            "id": "4b3cfdee-f124-4ca2-8775-773349a2b97c"
+                                            "children": {
+                                                "true": [
+                                                    {
+                                                        "command": "EVENT_MENU",
+                                                        "args": {
+                                                            "variable": "L0",
+                                                            "items": 4,
+                                                            "option1": "\\007\\002What happened here?",
+                                                            "option2": "\\007\\002Who do you suspect?",
+                                                            "option3": "\\007\\002What's your story?",
+                                                            "option4": "\\007\\002Nothing right now",
+                                                            "option5": "",
+                                                            "option6": "",
+                                                            "option7": "",
+                                                            "option8": "",
+                                                            "cancelOnB": true,
+                                                            "layout": "dialogue",
+                                                            "cancelOnLastOption": true,
+                                                            "__collapse": true
+                                                        },
+                                                        "id": "aa640a97-8db2-413f-be5c-14da91ab62cf"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                                        "args": {
+                                                            "customEventId": "90e03f02-e1cf-4913-a818-3f4d81a9b616",
+                                                            "__collapse": true,
+                                                            "$variable[V0]$": {
+                                                                "type": "variable",
+                                                                "value": "L0"
+                                                            }
+                                                        },
+                                                        "id": "cb6dff6c-15d1-4044-9b52-08b6083423b3"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                                        "args": {
+                                                            "customEventId": "88ef3cbc-5b72-46c9-8972-dea1e0d21ecb",
+                                                            "$variable[V0]$": {
+                                                                "type": "variable",
+                                                                "value": "L0"
+                                                            },
+                                                            "$variable[V1]$": {
+                                                                "type": "variable",
+                                                                "value": "2"
+                                                            },
+                                                            "$variable[V2]$": {
+                                                                "type": "variable",
+                                                                "value": "13"
+                                                            },
+                                                            "$variable[V3]$": {
+                                                                "type": "variable",
+                                                                "value": "15"
+                                                            },
+                                                            "$variable[V4]$": {
+                                                                "type": "variable",
+                                                                "value": "L1"
+                                                            },
+                                                            "$variable[V5]$": {
+                                                                "type": "variable",
+                                                                "value": "L2"
+                                                            },
+                                                            "$variable[V6]$": {
+                                                                "type": "variable",
+                                                                "value": "7"
+                                                            },
+                                                            "__collapse": true
+                                                        },
+                                                        "id": "9849ebc7-579e-4c98-a967-bca82604229a"
+                                                    }
+                                                ]
+                                            },
+                                            "id": "f0c45778-958d-421d-96c9-237e3adde5c4"
                                         }
                                     ],
                                     "false": [
                                         {
                                             "command": "EVENT_IF_VALUE",
                                             "args": {
-                                                "variable": "21",
+                                                "variable": "9",
                                                 "operator": "==",
                                                 "comparator": "0",
                                                 "__collapseElse": false
@@ -10051,7 +9966,7 @@
                                                     {
                                                         "command": "EVENT_IF_VALUE",
                                                         "args": {
-                                                            "variable": "40",
+                                                            "variable": "25",
                                                             "operator": "==",
                                                             "comparator": "0",
                                                             "__collapseElse": false,
@@ -10062,18 +9977,30 @@
                                                                 {
                                                                     "command": "EVENT_CALL_CUSTOM_EVENT",
                                                                     "args": {
-                                                                        "customEventId": "5475f94e-c454-40a6-b119-58d203bc6bfa",
-                                                                        "__collapse": true
+                                                                        "customEventId": "4fbf748e-7a94-4b07-8fb6-83d1ed2c6c8d",
+                                                                        "$variable[V0]$": {
+                                                                            "type": "variable",
+                                                                            "value": "13"
+                                                                        },
+                                                                        "$variable[V1]$": {
+                                                                            "type": "variable",
+                                                                            "value": "15"
+                                                                        },
+                                                                        "$variable[V3]$": {
+                                                                            "type": "variable",
+                                                                            "value": "7"
+                                                                        },
+                                                                        "__collapse": false
                                                                     },
-                                                                    "id": "53583391-df6a-4197-abcf-7d328e98e31a"
+                                                                    "id": "aa5561d3-ba79-4945-a737-5ebf42bbfd04"
                                                                 },
                                                                 {
                                                                     "command": "EVENT_SET_TRUE",
                                                                     "args": {
-                                                                        "variable": "40",
+                                                                        "variable": "25",
                                                                         "__collapse": true
                                                                     },
-                                                                    "id": "5a56fd3e-07a5-4404-be45-76eff5afd42d"
+                                                                    "id": "37d192d2-4223-4416-b8e0-6d2c0f0fd8f7"
                                                                 }
                                                             ],
                                                             "false": [
@@ -10082,7 +10009,7 @@
                                                                     "args": {
                                                                         "__scriptTabs": "text",
                                                                         "text": [
-                                                                            "\\007\\002My dear detective!"
+                                                                            "\\007\\002What can I do for you,\nmy dear detective?"
                                                                         ],
                                                                         "nameTag": "\\007\\002RORY",
                                                                         "nameX": 2,
@@ -10092,65 +10019,72 @@
                                                                         "avatarX": 2,
                                                                         "avatarY": 2,
                                                                         "avatarWidth": 3,
-                                                                        "orientation": "left",
-                                                                        "__collapse": false
+                                                                        "orientation": "left"
                                                                     },
-                                                                    "id": "d4d7efc1-9f50-4b96-9060-0f40d9834189"
+                                                                    "id": "cda05187-cd83-4e78-968b-57eb29e86aca"
                                                                 }
                                                             ]
                                                         },
-                                                        "id": "5e7f4383-28c0-4fdb-91b5-c68dec91675b"
+                                                        "id": "9a37297f-efa2-4b5f-a57b-e54033613390"
                                                     },
                                                     {
                                                         "command": "EVENT_CALL_CUSTOM_EVENT",
                                                         "args": {
-                                                            "customEventId": "daeaab77-0dab-47c8-bab9-cee6a54d0858",
-                                                            "__collapse": true,
+                                                            "customEventId": "17b912fc-1509-43a0-8e00-5bfc328fb3f9",
                                                             "$variable[V1]$": {
                                                                 "type": "variable",
+                                                                "value": "11"
+                                                            },
+                                                            "$variable[V2]$": {
+                                                                "type": "variable",
+                                                                "value": "22"
+                                                            },
+                                                            "$variable[V3]$": {
+                                                                "type": "variable",
                                                                 "value": "L1"
-                                                            }
+                                                            },
+                                                            "__collapse": true
                                                         },
-                                                        "id": "a5f99805-02b0-40e5-bfed-c1689416cfa3"
+                                                        "id": "4b3cfdee-f124-4ca2-8775-773349a2b97c"
                                                     }
                                                 ],
                                                 "false": [
                                                     {
                                                         "command": "EVENT_IF_VALUE",
                                                         "args": {
-                                                            "variable": "30",
+                                                            "variable": "21",
                                                             "operator": "==",
                                                             "comparator": "0",
-                                                            "__collapseElse": false,
-                                                            "__collapse": false
+                                                            "__collapseElse": false
                                                         },
                                                         "children": {
                                                             "true": [
                                                                 {
                                                                     "command": "EVENT_IF_VALUE",
                                                                     "args": {
-                                                                        "variable": "45",
+                                                                        "variable": "40",
                                                                         "operator": "==",
                                                                         "comparator": "0",
-                                                                        "__collapseElse": false
+                                                                        "__collapseElse": false,
+                                                                        "__collapse": true
                                                                     },
                                                                     "children": {
                                                                         "true": [
                                                                             {
                                                                                 "command": "EVENT_CALL_CUSTOM_EVENT",
                                                                                 "args": {
-                                                                                    "customEventId": "f064404e-93b2-44c2-887f-1a48687db396",
+                                                                                    "customEventId": "5475f94e-c454-40a6-b119-58d203bc6bfa",
                                                                                     "__collapse": true
                                                                                 },
-                                                                                "id": "bdab1c25-9b60-46f5-9466-d6bb63ae18d5"
+                                                                                "id": "53583391-df6a-4197-abcf-7d328e98e31a"
                                                                             },
                                                                             {
                                                                                 "command": "EVENT_SET_TRUE",
                                                                                 "args": {
-                                                                                    "variable": "45",
+                                                                                    "variable": "40",
                                                                                     "__collapse": true
                                                                                 },
-                                                                                "id": "a70d96ea-fcee-42ae-81e5-0c937de6a942"
+                                                                                "id": "5a56fd3e-07a5-4404-be45-76eff5afd42d"
                                                                             }
                                                                         ],
                                                                         "false": [
@@ -10159,7 +10093,7 @@
                                                                                 "args": {
                                                                                     "__scriptTabs": "text",
                                                                                     "text": [
-                                                                                        "\\007\\002Ah, you've returned!"
+                                                                                        "\\007\\002My dear detective!"
                                                                                     ],
                                                                                     "nameTag": "\\007\\002RORY",
                                                                                     "nameX": 2,
@@ -10172,41 +10106,41 @@
                                                                                     "orientation": "left",
                                                                                     "__collapse": false
                                                                                 },
-                                                                                "id": "d7fb94a3-9b84-4379-9f78-95ea74b14843"
+                                                                                "id": "d4d7efc1-9f50-4b96-9060-0f40d9834189"
                                                                             }
                                                                         ]
                                                                     },
-                                                                    "id": "69ababa4-354c-466c-99f1-b043c46eec27"
+                                                                    "id": "5e7f4383-28c0-4fdb-91b5-c68dec91675b"
                                                                 },
                                                                 {
                                                                     "command": "EVENT_CALL_CUSTOM_EVENT",
                                                                     "args": {
-                                                                        "customEventId": "64a3b472-8c2a-4780-9563-29a0cf311d95",
+                                                                        "customEventId": "daeaab77-0dab-47c8-bab9-cee6a54d0858",
+                                                                        "__collapse": true,
                                                                         "$variable[V1]$": {
                                                                             "type": "variable",
                                                                             "value": "L1"
                                                                         }
                                                                     },
-                                                                    "id": "fe1c0531-5831-4c1a-a1f1-722b5546e81c"
+                                                                    "id": "a5f99805-02b0-40e5-bfed-c1689416cfa3"
                                                                 }
                                                             ],
                                                             "false": [
                                                                 {
                                                                     "command": "EVENT_IF_VALUE",
                                                                     "args": {
-                                                                        "variable": "47",
+                                                                        "variable": "30",
                                                                         "operator": "==",
                                                                         "comparator": "0",
                                                                         "__collapseElse": false,
-                                                                        "__collapse": false,
-                                                                        "__disableElse": true
+                                                                        "__collapse": false
                                                                     },
                                                                     "children": {
                                                                         "true": [
                                                                             {
                                                                                 "command": "EVENT_IF_VALUE",
                                                                                 "args": {
-                                                                                    "variable": "54",
+                                                                                    "variable": "45",
                                                                                     "operator": "==",
                                                                                     "comparator": "0",
                                                                                     "__collapseElse": false
@@ -10216,18 +10150,18 @@
                                                                                         {
                                                                                             "command": "EVENT_CALL_CUSTOM_EVENT",
                                                                                             "args": {
-                                                                                                "customEventId": "d940869c-21f3-4003-88d5-be1d9da20d3b",
+                                                                                                "customEventId": "f064404e-93b2-44c2-887f-1a48687db396",
                                                                                                 "__collapse": true
                                                                                             },
-                                                                                            "id": "f6f9bcd6-6749-4669-8b73-55ae6cdf8c3e"
+                                                                                            "id": "bdab1c25-9b60-46f5-9466-d6bb63ae18d5"
                                                                                         },
                                                                                         {
                                                                                             "command": "EVENT_SET_TRUE",
                                                                                             "args": {
-                                                                                                "variable": "54",
+                                                                                                "variable": "45",
                                                                                                 "__collapse": true
                                                                                             },
-                                                                                            "id": "4eb17311-bd2c-4643-82d7-985d9c73368b"
+                                                                                            "id": "a70d96ea-fcee-42ae-81e5-0c937de6a942"
                                                                                         }
                                                                                     ],
                                                                                     "false": [
@@ -10236,7 +10170,7 @@
                                                                                             "args": {
                                                                                                 "__scriptTabs": "text",
                                                                                                 "text": [
-                                                                                                    "\\007\\002Detective!"
+                                                                                                    "\\007\\002Ah, you've returned!"
                                                                                                 ],
                                                                                                 "nameTag": "\\007\\002RORY",
                                                                                                 "nameX": 2,
@@ -10247,45 +10181,127 @@
                                                                                                 "avatarY": 2,
                                                                                                 "avatarWidth": 3,
                                                                                                 "orientation": "left",
-                                                                                                "__collapse": true
+                                                                                                "__collapse": false
                                                                                             },
-                                                                                            "id": "8f5e6c4b-a8aa-4f7b-9eb8-e374f63156ad"
+                                                                                            "id": "d7fb94a3-9b84-4379-9f78-95ea74b14843"
                                                                                         }
                                                                                     ]
                                                                                 },
-                                                                                "id": "1c6eadbf-1420-429d-a0d3-1491c8b0a134"
+                                                                                "id": "69ababa4-354c-466c-99f1-b043c46eec27"
                                                                             },
                                                                             {
                                                                                 "command": "EVENT_CALL_CUSTOM_EVENT",
                                                                                 "args": {
-                                                                                    "customEventId": "23cb2c24-dbd5-439d-aaad-b6c1071bb16e",
+                                                                                    "customEventId": "64a3b472-8c2a-4780-9563-29a0cf311d95",
                                                                                     "$variable[V1]$": {
                                                                                         "type": "variable",
                                                                                         "value": "L1"
                                                                                     }
                                                                                 },
-                                                                                "id": "c1cd91c4-10ee-4c81-9d65-9fe5491c37a0"
+                                                                                "id": "fe1c0531-5831-4c1a-a1f1-722b5546e81c"
                                                                             }
                                                                         ],
-                                                                        "false": []
+                                                                        "false": [
+                                                                            {
+                                                                                "command": "EVENT_IF_VALUE",
+                                                                                "args": {
+                                                                                    "variable": "47",
+                                                                                    "operator": "==",
+                                                                                    "comparator": "0",
+                                                                                    "__collapseElse": false,
+                                                                                    "__collapse": false,
+                                                                                    "__disableElse": true
+                                                                                },
+                                                                                "children": {
+                                                                                    "true": [
+                                                                                        {
+                                                                                            "command": "EVENT_IF_VALUE",
+                                                                                            "args": {
+                                                                                                "variable": "54",
+                                                                                                "operator": "==",
+                                                                                                "comparator": "0",
+                                                                                                "__collapseElse": false
+                                                                                            },
+                                                                                            "children": {
+                                                                                                "true": [
+                                                                                                    {
+                                                                                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                                                                                        "args": {
+                                                                                                            "customEventId": "d940869c-21f3-4003-88d5-be1d9da20d3b",
+                                                                                                            "__collapse": true
+                                                                                                        },
+                                                                                                        "id": "f6f9bcd6-6749-4669-8b73-55ae6cdf8c3e"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "command": "EVENT_SET_TRUE",
+                                                                                                        "args": {
+                                                                                                            "variable": "54",
+                                                                                                            "__collapse": true
+                                                                                                        },
+                                                                                                        "id": "4eb17311-bd2c-4643-82d7-985d9c73368b"
+                                                                                                    }
+                                                                                                ],
+                                                                                                "false": [
+                                                                                                    {
+                                                                                                        "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                                                                        "args": {
+                                                                                                            "__scriptTabs": "text",
+                                                                                                            "text": [
+                                                                                                                "\\007\\002Detective!"
+                                                                                                            ],
+                                                                                                            "nameTag": "\\007\\002RORY",
+                                                                                                            "nameX": 2,
+                                                                                                            "avatarType": "small",
+                                                                                                            "avatarId": "",
+                                                                                                            "largeAvatar": "",
+                                                                                                            "avatarX": 2,
+                                                                                                            "avatarY": 2,
+                                                                                                            "avatarWidth": 3,
+                                                                                                            "orientation": "left",
+                                                                                                            "__collapse": true
+                                                                                                        },
+                                                                                                        "id": "8f5e6c4b-a8aa-4f7b-9eb8-e374f63156ad"
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            "id": "1c6eadbf-1420-429d-a0d3-1491c8b0a134"
+                                                                                        },
+                                                                                        {
+                                                                                            "command": "EVENT_CALL_CUSTOM_EVENT",
+                                                                                            "args": {
+                                                                                                "customEventId": "23cb2c24-dbd5-439d-aaad-b6c1071bb16e",
+                                                                                                "$variable[V1]$": {
+                                                                                                    "type": "variable",
+                                                                                                    "value": "L1"
+                                                                                                }
+                                                                                            },
+                                                                                            "id": "c1cd91c4-10ee-4c81-9d65-9fe5491c37a0"
+                                                                                        }
+                                                                                    ],
+                                                                                    "false": []
+                                                                                },
+                                                                                "id": "896cda79-2a8f-4c51-9b1b-78b46934cd71"
+                                                                            }
+                                                                        ]
                                                                     },
-                                                                    "id": "896cda79-2a8f-4c51-9b1b-78b46934cd71"
+                                                                    "id": "ca1022ad-8229-4455-b9c5-72e6b0e1a3d8"
                                                                 }
                                                             ]
                                                         },
-                                                        "id": "ca1022ad-8229-4455-b9c5-72e6b0e1a3d8"
+                                                        "id": "ee976b5b-57d6-4d24-9dcb-c10155abd92b"
                                                     }
                                                 ]
                                             },
-                                            "id": "ee976b5b-57d6-4d24-9dcb-c10155abd92b"
+                                            "id": "6e01cabd-0b0d-40e3-b9f1-cd58007b257e"
                                         }
                                     ]
                                 },
-                                "id": "6e01cabd-0b0d-40e3-b9f1-cd58007b257e"
+                                "id": "5f881dbf-7bfe-4868-b23e-8aa108d812a0"
                             }
-                        ]
+                        ],
+                        "false": []
                     },
-                    "id": "5f881dbf-7bfe-4868-b23e-8aa108d812a0"
+                    "id": "02a9ecc8-51e4-40c1-b3ff-3b71f7bc20f1"
                 }
             ],
             "playerHit1Script": [],
@@ -10863,7 +10879,7 @@
                                                                                         "type": "variable",
                                                                                         "value": "L1"
                                                                                     },
-                                                                                    "__collapse": true
+                                                                                    "__collapse": false
                                                                                 },
                                                                                 "id": "ee5ed435-5395-476c-a717-7e2ab99eff56"
                                                                             }
@@ -28593,7 +28609,7 @@
                     "args": {
                         "variable": "34",
                         "__collapse": false,
-                        "__comment": false
+                        "__comment": true
                     },
                     "id": "6e459ebd-2edc-415a-960f-9d0a6941af0f"
                 },
@@ -34006,7 +34022,7 @@
                                                             "operator": "==",
                                                             "comparator": 1,
                                                             "__collapseElse": false,
-                                                            "__collapse": true
+                                                            "__collapse": false
                                                         },
                                                         "children": {
                                                             "true": [
@@ -34029,6 +34045,13 @@
                                                                         "__collapse": false
                                                                     },
                                                                     "id": "7adb003f-ec11-441a-9033-2694c938230d"
+                                                                },
+                                                                {
+                                                                    "command": "EVENT_INC_VALUE",
+                                                                    "args": {
+                                                                        "variable": "17"
+                                                                    },
+                                                                    "id": "66eb6065-a71b-4f93-8c3e-9685cd824560"
                                                                 }
                                                             ],
                                                             "false": [
@@ -34084,6 +34107,13 @@
                                                                                     "__collapse": false
                                                                                 },
                                                                                 "id": "ec025efe-5e05-45cc-8570-f486b997c9ec"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_DEC_VALUE",
+                                                                                "args": {
+                                                                                    "variable": "17"
+                                                                                },
+                                                                                "id": "8f847b9b-0f17-4769-a0a5-0d1d43783f09"
                                                                             }
                                                                         ]
                                                                     },
@@ -34165,24 +34195,14 @@
                                             "children": {
                                                 "true": [
                                                     {
-                                                        "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                        "command": "EVENT_TEXT",
                                                         "args": {
-                                                            "__scriptTabs": "nameTag",
                                                             "text": [
-                                                                "\\007\\002Get some answers,\nDetective."
+                                                                "\\007\\002Wait... no, let me\nrethink this."
                                                             ],
-                                                            "nameTag": "\\007\\002HALE",
-                                                            "nameX": 2,
-                                                            "avatarType": "small",
-                                                            "avatarId": "",
-                                                            "largeAvatar": "",
-                                                            "avatarX": 2,
-                                                            "avatarY": 2,
-                                                            "avatarWidth": 3,
-                                                            "orientation": "left",
-                                                            "__collapse": false
+                                                            "avatarId": ""
                                                         },
-                                                        "id": "83e2b7e7-adb0-4b69-a177-699946429617"
+                                                        "id": "fa7f4af9-fefb-45f6-a24f-07f48be904cc"
                                                     },
                                                     {
                                                         "command": "EVENT_SWITCH_SCENE",
@@ -34216,9 +34236,13 @@
                                                     {
                                                         "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
                                                         "args": {
-                                                            "__scriptTabs": "nameTag",
+                                                            "__scriptTabs": "text",
                                                             "text": [
-                                                                "\\007\\002............"
+                                                                "\\007\\002Oh.... oh detective.\nYou're right. I'm so\nembarrassed.",
+                                                                "The note was meant for\nme. I just... didn't want\nMiss Oak to know.",
+                                                                "But it was a foolish plan,\nmeeting up like we did.\nIt was so risky, she could ",
+                                                                "have found us at any\nmoment. The whole night I\nwas in such a state, ",
+                                                                "fretting away! No one even\nknew, we kept it so hidden.\nBut of course Xed suspected."
                                                             ],
                                                             "nameTag": "\\007\\002HALE",
                                                             "nameX": 2,
@@ -34232,6 +34256,76 @@
                                                             "__collapse": false
                                                         },
                                                         "id": "9e97dd53-d4af-4706-b0a2-89e9ce37d4b4"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_IF_VALUE",
+                                                        "args": {
+                                                            "variable": "65",
+                                                            "operator": "==",
+                                                            "comparator": 0,
+                                                            "__collapseElse": false
+                                                        },
+                                                        "children": {
+                                                            "true": [
+                                                                {
+                                                                    "command": "EVENT_TEXT",
+                                                                    "args": {
+                                                                        "text": [
+                                                                            "\\007\\002(So that's it. Now I need\nto confront the person who\nsent the note...)"
+                                                                        ],
+                                                                        "avatarId": ""
+                                                                    },
+                                                                    "id": "538c74f8-8df5-49d6-a362-dce69a68baa6"
+                                                                },
+                                                                {
+                                                                    "command": "EVENT_SET_TRUE",
+                                                                    "args": {
+                                                                        "variable": "64",
+                                                                        "__collapse": true
+                                                                    },
+                                                                    "id": "cfeb5681-b377-4130-8d54-e0135bb439aa"
+                                                                }
+                                                            ],
+                                                            "false": [
+                                                                {
+                                                                    "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                                    "args": {
+                                                                        "__scriptTabs": "text",
+                                                                        "text": [
+                                                                            "\\007\\002Rory and I... well, we\nmake no sense. He's\nconfident, and I'm an ",
+                                                                            "anxious mess. But somehow\nit works, and we balance\neach other. With Rory and",
+                                                                            "Miss Oak ending things just\nmonths ago, we couldn't make\nour feelings known.",
+                                                                            "To think, we were enjoying\neach other's company moments\nbefore Quentin was being ",
+                                                                            "killed... the thought makes\nme shudder. But of course,\nnow can you believe any of",
+                                                                            "that? We have every reason\nto cover for each other now\nthat you know our deepest ",
+                                                                            "feelings. You can't trust\nour alibis anymore, can\nyou?",
+                                                                            "......",
+                                                                            "Detective, I'm sorry I was\nso rude to you. You were\njust trying to find out ",
+                                                                            "the truth. ... I hope you,\nand Quentin, can both\nforgive me."
+                                                                        ],
+                                                                        "nameTag": "\\007\\002HALE",
+                                                                        "nameX": 2,
+                                                                        "avatarType": "small",
+                                                                        "avatarId": "",
+                                                                        "largeAvatar": "",
+                                                                        "avatarX": 2,
+                                                                        "avatarY": 2,
+                                                                        "avatarWidth": 3,
+                                                                        "orientation": "left",
+                                                                        "__collapse": false
+                                                                    },
+                                                                    "id": "4778941b-81b0-4b2a-9e7a-fb4ae57e4669"
+                                                                },
+                                                                {
+                                                                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                                                                    "args": {
+                                                                        "customEventId": "287332aa-9a2a-45c3-8fcd-f656234479c2"
+                                                                    },
+                                                                    "id": "1f488eb8-ad6f-4f36-9f50-5015edb986c8"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "id": "e6e8fdfa-b13e-4f87-b3b3-3927aad685f9"
                                                     }
                                                 ],
                                                 "false": []
@@ -34624,6 +34718,18 @@
                                                             "avatarId": ""
                                                         },
                                                         "id": "4aa38f01-7ca3-4561-a41c-82bb35e4de46"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_SWITCH_SCENE",
+                                                        "args": {
+                                                            "sceneId": "29e0c1e0-c242-4bba-adbf-8e571782bd5d",
+                                                            "x": 0,
+                                                            "y": 0,
+                                                            "direction": "",
+                                                            "fadeSpeed": "2",
+                                                            "__collapse": true
+                                                        },
+                                                        "id": "80d5a531-54b7-4a92-a814-caadddf29813"
                                                     }
                                                 ],
                                                 "false": []
@@ -35000,7 +35106,7 @@
                                                 "operator": "==",
                                                 "comparator": "0",
                                                 "__collapseElse": true,
-                                                "__collapse": true,
+                                                "__collapse": false,
                                                 "__disableElse": true
                                             },
                                             "children": {
@@ -35074,6 +35180,18 @@
                                                             "avatarId": ""
                                                         },
                                                         "id": "33d03166-d2f4-485a-8615-2e75769d3e07"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_SWITCH_SCENE",
+                                                        "args": {
+                                                            "sceneId": "b210561e-926d-437c-aebc-b4d993f2abb0",
+                                                            "x": 0,
+                                                            "y": 0,
+                                                            "direction": "",
+                                                            "fadeSpeed": "2",
+                                                            "__collapse": false
+                                                        },
+                                                        "id": "ead586df-da29-4e3b-9d9d-0ead1e9090e6"
                                                     }
                                                 ],
                                                 "false": []
@@ -35111,9 +35229,12 @@
                             {
                                 "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
                                 "args": {
-                                    "__scriptTabs": "nameTag",
+                                    "__scriptTabs": "text",
                                     "text": [
-                                        "\\007\\002Detective! You're back.\nI hope I've been at least\nsome help to you."
+                                        "\\007\\002Ah, my good detective!\nYou have been gone for\nsome time. I hope you've",
+                                        "found something of substance.\nI grow old waiting hours and\nhours. Ah, but from the look ",
+                                        "on your face, it appears you\nmay finally have something\nof value. Perhaps something ",
+                                        "more interesting awaits us\nboth? Tell me presently."
                                     ],
                                     "nameTag": "\\007\\002RORY",
                                     "nameX": 2,
@@ -35143,9 +35264,12 @@
                                         {
                                             "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
                                             "args": {
-                                                "__scriptTabs": "nameTag",
+                                                "__scriptTabs": "text",
                                                 "text": [
-                                                    "\\007\\002Detective! You're back.\nI hope I've been at least\nsome help to you."
+                                                    "\\007\\002Ah, my dear detective, how\nmay I be of service? I aim\nto serve. You've uncovered ",
+                                                    "something important, haven't\nyou? Well, don't falter,\npartner of mine. Let's ",
+                                                    "compare notes posthaste\nand put our excellent minds\ntogether. Perhaps you've ",
+                                                    "stumbled upon the murderer!"
                                                 ],
                                                 "nameTag": "\\007\\002RORY",
                                                 "nameX": 2,
@@ -35165,9 +35289,11 @@
                                         {
                                             "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
                                             "args": {
-                                                "__scriptTabs": "nameTag",
+                                                "__scriptTabs": "text",
                                                 "text": [
-                                                    "\\007\\002Detective! You're back.\nI hope I've been at least\nsome help to you."
+                                                    "\\007\\002The intrepid detective\nreturns, with insight, I\nhope! Judging by the look",
+                                                    "on your face, you have\nsomething to ask me, I\nthink. Nothing too serious, ",
+                                                    "I hope, ha!"
                                                 ],
                                                 "nameTag": "\\007\\002RORY",
                                                 "nameX": 2,
@@ -35199,7 +35325,12 @@
             "variables": {
                 "V0": {
                     "id": "V0",
-                    "name": "Variable A",
+                    "name": "Local 0",
+                    "passByReference": true
+                },
+                "V1": {
+                    "id": "V1",
+                    "name": "Local 1",
                     "passByReference": true
                 }
             },
@@ -35241,7 +35372,7 @@
                                                 "cancelOnLastOption": true,
                                                 "__collapse": false
                                             },
-                                            "id": "805917b1-46ec-4632-9b04-a465f587befd"
+                                            "id": "af2c1db7-255a-4e20-ab99-3f7ff823b3ab"
                                         },
                                         {
                                             "command": "EVENT_IF_VALUE",
@@ -35250,7 +35381,7 @@
                                                 "operator": "==",
                                                 "comparator": "0",
                                                 "__collapseElse": true,
-                                                "__collapse": false,
+                                                "__collapse": true,
                                                 "__disableElse": true
                                             },
                                             "children": {
@@ -35258,11 +35389,11 @@
                                                     {
                                                         "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
                                                         "args": {
-                                                            "__scriptTabs": "nameTag",
+                                                            "__scriptTabs": "text",
                                                             "text": [
-                                                                "\\007\\002Get some answers,\nDetective."
+                                                                "\\007\\002I have every faith\nwe'll solve this case\nsoon!"
                                                             ],
-                                                            "nameTag": "\\007\\002HALE",
+                                                            "nameTag": "\\007\\002RORY",
                                                             "nameX": 2,
                                                             "avatarType": "small",
                                                             "avatarId": "",
@@ -35273,24 +35404,24 @@
                                                             "orientation": "left",
                                                             "__collapse": false
                                                         },
-                                                        "id": "f8c09843-1f1a-4a62-8553-c26b67533113"
+                                                        "id": "c6eeafad-3c5c-4fa6-9383-2d4cc6afc218"
                                                     },
                                                     {
                                                         "command": "EVENT_SWITCH_SCENE",
                                                         "args": {
-                                                            "sceneId": "1395b9c2-ab4c-4c5b-b988-e56dc2ab651d",
+                                                            "sceneId": "f440f882-e98d-4991-8986-5e433117648e",
                                                             "x": 0,
                                                             "y": 0,
                                                             "direction": "",
                                                             "fadeSpeed": "2",
                                                             "__collapse": false
                                                         },
-                                                        "id": "bb72198b-2d36-4dca-8fee-128d47fecc40"
+                                                        "id": "d8093b07-f513-424a-be3a-218613f4bf85"
                                                     }
                                                 ],
                                                 "false": []
                                             },
-                                            "id": "1046c9cb-ae89-42cc-8f15-80511541864c"
+                                            "id": "a3e29821-dbb9-43c4-affb-b45b11dc35af"
                                         },
                                         {
                                             "command": "EVENT_IF_VALUE",
@@ -35305,13 +35436,27 @@
                                             "children": {
                                                 "true": [
                                                     {
+                                                        "command": "EVENT_TEXT",
+                                                        "args": {
+                                                            "text": [
+                                                                "\\007\\002(I must present that\nclandestine note to\neveryone...)"
+                                                            ],
+                                                            "avatarId": "",
+                                                            "__collapse": true
+                                                        },
+                                                        "id": "a7101df0-9316-4907-9371-7396ef769e04"
+                                                    },
+                                                    {
                                                         "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
                                                         "args": {
-                                                            "__scriptTabs": "nameTag",
+                                                            "__scriptTabs": "text",
                                                             "text": [
-                                                                "\\007\\002............"
+                                                                "\\007\\002A-ah...",
+                                                                "Where did you find this?\nMy dear detective, this\nlooks like an important ",
+                                                                "clue. But I assure you,\nI have nothing to do with\nit. Have you talked to ",
+                                                                "Miss Oak? She's full of\nadmirers, always beating\ndown her door."
                                                             ],
-                                                            "nameTag": "\\007\\002HALE",
+                                                            "nameTag": "\\007\\002RORY",
                                                             "nameX": 2,
                                                             "avatarType": "small",
                                                             "avatarId": "",
@@ -35322,16 +35467,153 @@
                                                             "orientation": "left",
                                                             "__collapse": false
                                                         },
-                                                        "id": "6b4d9f0e-ab9b-4273-a8ba-7f77d4a402c7"
+                                                        "id": "e4781220-69f7-4b89-a1be-0a9886889f79"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_MENU",
+                                                        "args": {
+                                                            "variable": "V1",
+                                                            "items": 3,
+                                                            "option1": "\\007\\002Seems like you",
+                                                            "option2": "\\007\\002Are you sure?",
+                                                            "option3": "\\007\\002What are you hiding?",
+                                                            "option4": "",
+                                                            "option5": "",
+                                                            "option6": "",
+                                                            "option7": "",
+                                                            "option8": "",
+                                                            "cancelOnB": true,
+                                                            "layout": "dialogue",
+                                                            "cancelOnLastOption": true,
+                                                            "__collapse": false
+                                                        },
+                                                        "id": "2d389f5d-546b-4783-b67e-ad12223bbdc1"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_IF_VALUE",
+                                                        "args": {
+                                                            "variable": "V1",
+                                                            "operator": "==",
+                                                            "comparator": 1,
+                                                            "__collapseElse": false,
+                                                            "__collapse": false
+                                                        },
+                                                        "children": {
+                                                            "true": [
+                                                                {
+                                                                    "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                                    "args": {
+                                                                        "__scriptTabs": "text",
+                                                                        "text": [
+                                                                            "\\007\\002Why, I assure you, my\ndear detective! This has\nnothing to do with me.",
+                                                                            "Though I am flattered to\nthink you believe others\nfind me so desirable.",
+                                                                            "Put your attention to\nfinding the real killer\nthough. You'll find that ",
+                                                                            "path more satisfying."
+                                                                        ],
+                                                                        "nameTag": "\\007\\002HALE",
+                                                                        "nameX": 2,
+                                                                        "avatarType": "small",
+                                                                        "avatarId": "",
+                                                                        "largeAvatar": "",
+                                                                        "avatarX": 2,
+                                                                        "avatarY": 2,
+                                                                        "avatarWidth": 3,
+                                                                        "orientation": "left",
+                                                                        "__collapse": false
+                                                                    },
+                                                                    "id": "3060d412-e695-4dab-8062-958c83d62c33"
+                                                                },
+                                                                {
+                                                                    "command": "EVENT_INC_VALUE",
+                                                                    "args": {
+                                                                        "variable": "7",
+                                                                        "__collapse": true
+                                                                    },
+                                                                    "id": "459ab440-35e1-40a1-9db6-d7cc25b187ac"
+                                                                }
+                                                            ],
+                                                            "false": [
+                                                                {
+                                                                    "command": "EVENT_IF_VALUE",
+                                                                    "args": {
+                                                                        "variable": "V1",
+                                                                        "operator": "==",
+                                                                        "comparator": 2,
+                                                                        "__collapseElse": false
+                                                                    },
+                                                                    "children": {
+                                                                        "true": [
+                                                                            {
+                                                                                "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                                                "args": {
+                                                                                    "__scriptTabs": "text",
+                                                                                    "text": [
+                                                                                        "\\007\\002I think I would know\nwhether I had anything to\ndo with this, detective.",
+                                                                                        "Your suspicion is\nunwarranted and dismaying.\nI hope you consider the ",
+                                                                                        "consequences of this."
+                                                                                    ],
+                                                                                    "nameTag": "\\007\\002RORY",
+                                                                                    "nameX": 2,
+                                                                                    "avatarType": "small",
+                                                                                    "avatarId": "",
+                                                                                    "largeAvatar": "",
+                                                                                    "avatarX": 2,
+                                                                                    "avatarY": 2,
+                                                                                    "avatarWidth": 3,
+                                                                                    "orientation": "left",
+                                                                                    "__collapse": false
+                                                                                },
+                                                                                "id": "c3a22860-fe79-47d5-86fd-ebf6407e87d0"
+                                                                            }
+                                                                        ],
+                                                                        "false": [
+                                                                            {
+                                                                                "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                                                "args": {
+                                                                                    "__scriptTabs": "text",
+                                                                                    "text": [
+                                                                                        "\\007\\002My good detective!\nHiding! Why, how\nabsolutely dramatic of ",
+                                                                                        "you! I have no time to\nbe offended, for I am\ndelighted at how similar",
+                                                                                        "to a detective novel this\nis becoming! Suspects\nharboring secrets, a great ",
+                                                                                        "detective using evidence\nto pry it out of them....",
+                                                                                        "Ahh... but without that\nevidence, you have nothing.\nSo let's move on!"
+                                                                                    ],
+                                                                                    "nameTag": "\\007\\002RORY",
+                                                                                    "nameX": 2,
+                                                                                    "avatarType": "small",
+                                                                                    "avatarId": "",
+                                                                                    "largeAvatar": "",
+                                                                                    "avatarX": 2,
+                                                                                    "avatarY": 2,
+                                                                                    "avatarWidth": 3,
+                                                                                    "orientation": "left",
+                                                                                    "__collapse": false
+                                                                                },
+                                                                                "id": "d7e8bff7-c619-4d78-9e1c-10db8e459e92"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_DEC_VALUE",
+                                                                                "args": {
+                                                                                    "variable": "7"
+                                                                                },
+                                                                                "id": "fe396580-8dfa-41bd-a454-ceaf8ca493c7"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "id": "2bb78be0-fb16-4d15-b7a7-7d33ae274c7b"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "id": "3b69d6e9-f041-496c-8218-e18fd6507ebd"
                                                     }
                                                 ],
                                                 "false": []
                                             },
-                                            "id": "e3950a06-64a5-44f2-9cec-cdbe997e1edf"
+                                            "id": "c9c7008b-6d34-47b1-8069-14d9e6fe747b"
                                         }
                                     ]
                                 },
-                                "id": "20322caf-79d6-4616-886c-04b520779253"
+                                "id": "1a180a82-03f0-4d03-8597-008729b63d85"
                             }
                         ],
                         "false": [
@@ -35347,7 +35629,7 @@
                                             "args": {
                                                 "variable": "V0",
                                                 "items": 2,
-                                                "option1": "\\007\\002Hale is suspicous",
+                                                "option1": "\\007\\002Rory is suspicous",
                                                 "option2": "\\007\\002No... let me rethink this",
                                                 "option3": "",
                                                 "option4": "\\007\\002Nothing right now",
@@ -35360,7 +35642,7 @@
                                                 "cancelOnLastOption": true,
                                                 "__collapse": false
                                             },
-                                            "id": "9d4181e9-8a88-4dce-926f-1e1072afded5"
+                                            "id": "3c67d37c-f9a3-4766-bb02-99a447c4547e"
                                         },
                                         {
                                             "command": "EVENT_IF_VALUE",
@@ -35375,41 +35657,31 @@
                                             "children": {
                                                 "true": [
                                                     {
-                                                        "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                        "command": "EVENT_TEXT",
                                                         "args": {
-                                                            "__scriptTabs": "nameTag",
                                                             "text": [
-                                                                "\\007\\002Get some answers,\nDetective."
+                                                                "\\007\\002Wait... no, let me\nrethink this."
                                                             ],
-                                                            "nameTag": "\\007\\002HALE",
-                                                            "nameX": 2,
-                                                            "avatarType": "small",
-                                                            "avatarId": "",
-                                                            "largeAvatar": "",
-                                                            "avatarX": 2,
-                                                            "avatarY": 2,
-                                                            "avatarWidth": 3,
-                                                            "orientation": "left",
-                                                            "__collapse": false
+                                                            "avatarId": ""
                                                         },
-                                                        "id": "df72c1d9-bb90-4684-8c1b-307f721ede6b"
+                                                        "id": "ab4c8604-6373-49c2-be83-013fb1f90068"
                                                     },
                                                     {
                                                         "command": "EVENT_SWITCH_SCENE",
                                                         "args": {
-                                                            "sceneId": "1395b9c2-ab4c-4c5b-b988-e56dc2ab651d",
+                                                            "sceneId": "f440f882-e98d-4991-8986-5e433117648e",
                                                             "x": 0,
                                                             "y": 0,
                                                             "direction": "",
                                                             "fadeSpeed": "2",
                                                             "__collapse": false
                                                         },
-                                                        "id": "d6e7acfb-fba5-4da6-9976-244b2a8b8e09"
+                                                        "id": "3d89beb5-7b43-493f-8842-5bcb26661d17"
                                                     }
                                                 ],
                                                 "false": []
                                             },
-                                            "id": "e649ba64-656b-4e7a-af09-b34b5445ecd7"
+                                            "id": "d815a47b-138d-45bf-a588-3036bc2f942d"
                                         },
                                         {
                                             "command": "EVENT_IF_VALUE",
@@ -35424,37 +35696,24 @@
                                             "children": {
                                                 "true": [
                                                     {
-                                                        "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                        "command": "EVENT_CALL_CUSTOM_EVENT",
                                                         "args": {
-                                                            "__scriptTabs": "nameTag",
-                                                            "text": [
-                                                                "\\007\\002............"
-                                                            ],
-                                                            "nameTag": "\\007\\002HALE",
-                                                            "nameX": 2,
-                                                            "avatarType": "small",
-                                                            "avatarId": "",
-                                                            "largeAvatar": "",
-                                                            "avatarX": 2,
-                                                            "avatarY": 2,
-                                                            "avatarWidth": 3,
-                                                            "orientation": "left",
-                                                            "__collapse": false
+                                                            "customEventId": "5f245d92-abfb-407d-aed3-de677b904b98"
                                                         },
-                                                        "id": "f6fe75cc-c3e7-42a6-8484-b302237fc66d"
+                                                        "id": "1df9010a-6a28-4b29-aa31-5d4b724f64b5"
                                                     }
                                                 ],
                                                 "false": []
                                             },
-                                            "id": "54c6f03c-1fc6-4cd8-8705-5c53760eff61"
+                                            "id": "69250e5a-d849-4c83-99ef-33f0ccbf55b8"
                                         }
                                     ]
                                 },
-                                "id": "c87bfd5a-5306-449c-bd3d-d82f61e313a2"
+                                "id": "51ce4db2-8edd-4e80-a809-0a085fb0f173"
                             }
                         ]
                     },
-                    "id": "3191aa0f-1e8b-43f9-bbd9-b584cadba901"
+                    "id": "69408aa2-c86e-47de-94cb-bb08eb881b44"
                 }
             ]
         },
@@ -35479,9 +35738,11 @@
                             {
                                 "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
                                 "args": {
-                                    "__scriptTabs": "nameTag",
+                                    "__scriptTabs": "text",
                                     "text": [
-                                        "\\007\\002Detective! You're back.\nI hope I've been at least\nsome help to you."
+                                        "\\007\\002Oh, this is new. You look\nlike you're going to laugh\nor cry or something.",
+                                        "You've learned something,\nhaven't you? I'm on the\nedge of my seat.",
+                                        "Well, bring it on, I'm\ndying to know."
                                     ],
                                     "nameTag": "\\007\\002LINDY",
                                     "nameX": 2,
@@ -35511,9 +35772,11 @@
                                         {
                                             "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
                                             "args": {
-                                                "__scriptTabs": "nameTag",
+                                                "__scriptTabs": "text",
                                                 "text": [
-                                                    "\\007\\002Detective! You're back.\nI hope I've been at least\nsome help to you."
+                                                    "\\007\\002The great detective, back\nfor more! Except something's\nnew...",
+                                                    "Have you finally figured\nsomething out? Let's hope\nit's important. Maybe you've ",
+                                                    "even learned who the killer\nis? Alright, well tell me,\nwhat is it?"
                                                 ],
                                                 "nameTag": "\\007\\002LINDY",
                                                 "nameX": 2,
@@ -35533,9 +35796,12 @@
                                         {
                                             "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
                                             "args": {
-                                                "__scriptTabs": "nameTag",
+                                                "__scriptTabs": "text",
                                                 "text": [
-                                                    "\\007\\002Detective! You're back.\nI hope I've been at least\nsome help to you."
+                                                    "\\007\\002Ah, you're back. And... you've\nlearned something.",
+                                                    "I can read it all over your\nface. You're not very good\nat poker, are you?",
+                                                    "Is it something real or just\nsome twigs you found? Well, \ndon't just stand there. What ",
+                                                    "did you find?"
                                                 ],
                                                 "nameTag": "\\007\\002LINDY",
                                                 "nameX": 2,
@@ -35567,7 +35833,12 @@
             "variables": {
                 "V0": {
                     "id": "V0",
-                    "name": "Variable A",
+                    "name": "Local 0",
+                    "passByReference": true
+                },
+                "V1": {
+                    "id": "V1",
+                    "name": "Local 1",
                     "passByReference": true
                 }
             },
@@ -35618,7 +35889,7 @@
                                                 "operator": "==",
                                                 "comparator": "0",
                                                 "__collapseElse": true,
-                                                "__collapse": false,
+                                                "__collapse": true,
                                                 "__disableElse": true
                                             },
                                             "children": {
@@ -35626,11 +35897,11 @@
                                                     {
                                                         "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
                                                         "args": {
-                                                            "__scriptTabs": "nameTag",
+                                                            "__scriptTabs": "text",
                                                             "text": [
-                                                                "\\007\\002Get some answers,\nDetective."
+                                                                "\\007\\002Okay..."
                                                             ],
-                                                            "nameTag": "\\007\\002HALE",
+                                                            "nameTag": "\\007\\002LINDY",
                                                             "nameX": 2,
                                                             "avatarType": "small",
                                                             "avatarId": "",
@@ -35646,7 +35917,7 @@
                                                     {
                                                         "command": "EVENT_SWITCH_SCENE",
                                                         "args": {
-                                                            "sceneId": "1395b9c2-ab4c-4c5b-b988-e56dc2ab651d",
+                                                            "sceneId": "f440f882-e98d-4991-8986-5e433117648e",
                                                             "x": 0,
                                                             "y": 0,
                                                             "direction": "",
@@ -35675,11 +35946,14 @@
                                                     {
                                                         "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
                                                         "args": {
-                                                            "__scriptTabs": "nameTag",
+                                                            "__scriptTabs": "text",
                                                             "text": [
-                                                                "\\007\\002............"
+                                                                "\\007\\002............",
+                                                                "Okay, you got me. This IS\ninteresting. What? No,\nit's not my note! Don't ",
+                                                                "be ridiculous. I'm just\nsaying I'm shocked that\nyou managed to uncover",
+                                                                "something important. But\nwho could have dropped this?\nWho could have sent it?"
                                                             ],
-                                                            "nameTag": "\\007\\002HALE",
+                                                            "nameTag": "\\007\\002LINDY",
                                                             "nameX": 2,
                                                             "avatarType": "small",
                                                             "avatarId": "",
@@ -35691,6 +35965,141 @@
                                                             "__collapse": false
                                                         },
                                                         "id": "084ef3c7-83bb-41c0-9e8c-296171579796"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_MENU",
+                                                        "args": {
+                                                            "variable": "V1",
+                                                            "items": 3,
+                                                            "option1": "\\007\\002Starting to suspect...",
+                                                            "option2": "\\007\\002Not sure yet",
+                                                            "option3": "\\007\\002You're flustered...",
+                                                            "option4": "",
+                                                            "option5": "",
+                                                            "option6": "",
+                                                            "option7": "",
+                                                            "option8": "",
+                                                            "cancelOnB": true,
+                                                            "layout": "dialogue",
+                                                            "cancelOnLastOption": true,
+                                                            "__collapse": false
+                                                        },
+                                                        "id": "b1f7650e-9a47-4778-b575-2d99bd70a619"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_IF_VALUE",
+                                                        "args": {
+                                                            "variable": "V1",
+                                                            "operator": "==",
+                                                            "comparator": 1,
+                                                            "__collapseElse": false,
+                                                            "__collapse": false
+                                                        },
+                                                        "children": {
+                                                            "true": [
+                                                                {
+                                                                    "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                                    "args": {
+                                                                        "__scriptTabs": "text",
+                                                                        "text": [
+                                                                            "\\007\\002... Interesting. Maybe\nI did underestimate you\nthen. Was it Quentin?",
+                                                                            "I always was suspicious\nof his flirtatious nature.\nIt seemed.... dishonest.",
+                                                                            "But maybe it was sincere.\nWho knows? Maybe we'll never\nknow now."
+                                                                        ],
+                                                                        "nameTag": "\\007\\002LINDY",
+                                                                        "nameX": 2,
+                                                                        "avatarType": "small",
+                                                                        "avatarId": "",
+                                                                        "largeAvatar": "",
+                                                                        "avatarX": 2,
+                                                                        "avatarY": 2,
+                                                                        "avatarWidth": 3,
+                                                                        "orientation": "left",
+                                                                        "__collapse": false
+                                                                    },
+                                                                    "id": "d49b9e0f-3ffa-47d7-a714-d5d6dc10ef69"
+                                                                },
+                                                                {
+                                                                    "command": "EVENT_INC_VALUE",
+                                                                    "args": {
+                                                                        "variable": "8",
+                                                                        "__collapse": true
+                                                                    },
+                                                                    "id": "dad3cb32-4c82-47c3-8bc4-610174380860"
+                                                                }
+                                                            ],
+                                                            "false": [
+                                                                {
+                                                                    "command": "EVENT_IF_VALUE",
+                                                                    "args": {
+                                                                        "variable": "V1",
+                                                                        "operator": "==",
+                                                                        "comparator": 2,
+                                                                        "__collapseElse": false
+                                                                    },
+                                                                    "children": {
+                                                                        "true": [
+                                                                            {
+                                                                                "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                                                "args": {
+                                                                                    "__scriptTabs": "text",
+                                                                                    "text": [
+                                                                                        "\\007\\002Of course. Even the\ndetective has no clue.",
+                                                                                        "I don't know why I got\nmy hopes up that you'd\nhave even a single answer.",
+                                                                                        "Ridiculous. Well, go off\nand keep playing at your\nlittle game."
+                                                                                    ],
+                                                                                    "nameTag": "\\007\\002LINDY",
+                                                                                    "nameX": 2,
+                                                                                    "avatarType": "small",
+                                                                                    "avatarId": "",
+                                                                                    "largeAvatar": "",
+                                                                                    "avatarX": 2,
+                                                                                    "avatarY": 2,
+                                                                                    "avatarWidth": 3,
+                                                                                    "orientation": "left",
+                                                                                    "__collapse": false
+                                                                                },
+                                                                                "id": "516016b7-6007-478b-b668-4f460bc9673e"
+                                                                            }
+                                                                        ],
+                                                                        "false": [
+                                                                            {
+                                                                                "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                                                "args": {
+                                                                                    "__scriptTabs": "text",
+                                                                                    "text": [
+                                                                                        "\\007\\002What? No!",
+                                                                                        "I just need to know who\nmurdered Quentin and you\njust insist on constantly",
+                                                                                        "playing games. I just...\n...Okay fine. I was a bit\nflustered. I'm so ",
+                                                                                        "surprised by this note.\nPromise you'll return\nwhen you know more?"
+                                                                                    ],
+                                                                                    "nameTag": "\\007\\002LINDY",
+                                                                                    "nameX": 2,
+                                                                                    "avatarType": "small",
+                                                                                    "avatarId": "",
+                                                                                    "largeAvatar": "",
+                                                                                    "avatarX": 2,
+                                                                                    "avatarY": 2,
+                                                                                    "avatarWidth": 3,
+                                                                                    "orientation": "left",
+                                                                                    "__collapse": false
+                                                                                },
+                                                                                "id": "f3d2e373-9d15-44e2-9773-755b70fc2f19"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_DEC_VALUE",
+                                                                                "args": {
+                                                                                    "variable": "8"
+                                                                                },
+                                                                                "id": "8333b8c1-a8df-4350-8e4e-4a31b7af48cc"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "id": "882d18ec-4040-4504-8a55-92e41a244aa2"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "id": "125ada8c-2ffd-4efa-a140-4de83b536d45"
                                                     }
                                                 ],
                                                 "false": []
@@ -35715,7 +36124,7 @@
                                             "args": {
                                                 "variable": "V0",
                                                 "items": 2,
-                                                "option1": "\\007\\002Hale is suspicous",
+                                                "option1": "\\007\\002Lindy is suspicous",
                                                 "option2": "\\007\\002No... let me rethink this",
                                                 "option3": "",
                                                 "option4": "\\007\\002Nothing right now",
@@ -35743,29 +36152,19 @@
                                             "children": {
                                                 "true": [
                                                     {
-                                                        "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                                        "command": "EVENT_TEXT",
                                                         "args": {
-                                                            "__scriptTabs": "nameTag",
                                                             "text": [
-                                                                "\\007\\002Get some answers,\nDetective."
+                                                                "\\007\\002Wait... no, let me\nrethink this."
                                                             ],
-                                                            "nameTag": "\\007\\002HALE",
-                                                            "nameX": 2,
-                                                            "avatarType": "small",
-                                                            "avatarId": "",
-                                                            "largeAvatar": "",
-                                                            "avatarX": 2,
-                                                            "avatarY": 2,
-                                                            "avatarWidth": 3,
-                                                            "orientation": "left",
-                                                            "__collapse": false
+                                                            "avatarId": ""
                                                         },
-                                                        "id": "7232a6ce-e48d-4ab2-a589-11c021d10e5d"
+                                                        "id": "c136039e-a2b3-47aa-9f69-39561c5bcc3f"
                                                     },
                                                     {
                                                         "command": "EVENT_SWITCH_SCENE",
                                                         "args": {
-                                                            "sceneId": "1395b9c2-ab4c-4c5b-b988-e56dc2ab651d",
+                                                            "sceneId": "f440f882-e98d-4991-8986-5e433117648e",
                                                             "x": 0,
                                                             "y": 0,
                                                             "direction": "",
@@ -35794,11 +36193,11 @@
                                                     {
                                                         "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
                                                         "args": {
-                                                            "__scriptTabs": "nameTag",
+                                                            "__scriptTabs": "text",
                                                             "text": [
-                                                                "\\007\\002............"
+                                                                "\\007\\002You're ridiculous. Of\ncourse I didn't meet for\na romantic tryst."
                                                             ],
-                                                            "nameTag": "\\007\\002HALE",
+                                                            "nameTag": "\\007\\002LINDY",
                                                             "nameX": 2,
                                                             "avatarType": "small",
                                                             "avatarId": "",
@@ -35810,6 +36209,29 @@
                                                             "__collapse": false
                                                         },
                                                         "id": "c7cb096d-c1c1-428f-8be1-5922e6e7e339"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_TEXT",
+                                                        "args": {
+                                                            "text": [
+                                                                "\\007\\002(Gah... looks like I\nwasn't quite right about\nthat... Let me try ",
+                                                                "someone else.)"
+                                                            ],
+                                                            "avatarId": ""
+                                                        },
+                                                        "id": "4a8d991e-2962-4ddb-976b-76a3502ae4b1"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_SWITCH_SCENE",
+                                                        "args": {
+                                                            "sceneId": "f440f882-e98d-4991-8986-5e433117648e",
+                                                            "x": 0,
+                                                            "y": 0,
+                                                            "direction": "",
+                                                            "fadeSpeed": "2",
+                                                            "__collapse": false
+                                                        },
+                                                        "id": "ba64dc97-6a5f-43c4-b4af-486b7666e3ce"
                                                     }
                                                 ],
                                                 "false": []
@@ -35951,6 +36373,153 @@
                         "false": []
                     },
                     "id": "51d9bc81-39e9-4471-ab36-02433fe2bf04"
+                }
+            ]
+        },
+        {
+            "id": "287332aa-9a2a-45c3-8fcd-f656234479c2",
+            "name": "Part2Progress",
+            "description": "",
+            "variables": {},
+            "actors": {},
+            "symbol": "script_60",
+            "script": [
+                {
+                    "command": "EVENT_FADE_OUT",
+                    "args": {
+                        "speed": 5
+                    },
+                    "id": "c044daa0-5b10-4951-9713-2628f5bdd6d5"
+                },
+                {
+                    "command": "EVENT_SET_FALSE",
+                    "args": {
+                        "variable": "56",
+                        "__collapse": true
+                    },
+                    "id": "7c210dd8-d963-462b-a40c-db52f2084982"
+                },
+                {
+                    "command": "EVENT_SET_TRUE",
+                    "args": {
+                        "variable": "57",
+                        "__collapse": true
+                    },
+                    "id": "17b395d0-b273-4104-95ee-554ff20a0303"
+                },
+                {
+                    "command": "EVENT_SWITCH_SCENE",
+                    "args": {
+                        "sceneId": "9d0b3022-f2e1-48b8-a9ef-bec41a2271de",
+                        "x": 0,
+                        "y": 0,
+                        "direction": "",
+                        "fadeSpeed": "2"
+                    },
+                    "id": "bb0c3386-94b4-4931-bbb0-c063eb8f92f5"
+                }
+            ]
+        },
+        {
+            "id": "5f245d92-abfb-407d-aed3-de677b904b98",
+            "name": "RoryConfession",
+            "description": "",
+            "variables": {},
+            "actors": {},
+            "symbol": "script_61",
+            "script": [
+                {
+                    "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                    "args": {
+                        "__scriptTabs": "text",
+                        "text": [
+                            "\\007\\002............",
+                            "You got me, my dear\ndetective. You're right. I\nwrote the note. It was a",
+                            " secret... a moment of\nweakness. We never should\nhave met. The pain it could ",
+                            "cause to Miss Oak... We...\nwe stopped our romantic tryst\nmonths ago. But I still ",
+                            "suspect she has strong\nfeelings. So a secret it\nmust remain.",
+                            "....... I never wanted to\nhurt her."
+                        ],
+                        "nameTag": "\\007\\002RORY",
+                        "nameX": 2,
+                        "avatarType": "small",
+                        "avatarId": "",
+                        "largeAvatar": "",
+                        "avatarX": 2,
+                        "avatarY": 2,
+                        "avatarWidth": 3,
+                        "orientation": "left",
+                        "__collapse": false
+                    },
+                    "id": "23710fdc-fb94-4c47-818e-90e06e55769d"
+                },
+                {
+                    "command": "EVENT_IF_VALUE",
+                    "args": {
+                        "variable": "64",
+                        "operator": "==",
+                        "comparator": 0,
+                        "__collapseElse": false
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "\\007\\002(So that's it. Now I just\nneed to confront the\nperson to whom Rory sent",
+                                        "the note.)"
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "f7a4d6e4-2e9a-445c-a94c-10564a7574e2"
+                            },
+                            {
+                                "command": "EVENT_SET_TRUE",
+                                "args": {
+                                    "variable": "65",
+                                    "__collapse": false
+                                },
+                                "id": "0b8508b3-475d-4bbc-837a-4a6e0237e2c9"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
+                                "args": {
+                                    "__scriptTabs": "text",
+                                    "text": [
+                                        "\\007\\002Hale and I... it's not\nsomething I could have\never imagined happening.",
+                                        "We're so different. But it\nworks, somehow. I can't\nexplain it. Yes, we met up,",
+                                        "the night that Quentin died.\nThe moment before he died,\nactually. I mean, if you ",
+                                        "believe us. But I\nunderstand that now it puts\nour alibis into question ",
+                                        "because we have personal\nreasons to cover for each\nother. I suppose you'll have ",
+                                        "to decide for yourself.",
+                                        "Oh... and please don't tell\nMiss Oak."
+                                    ],
+                                    "nameTag": "\\007\\002RORY",
+                                    "nameX": 2,
+                                    "avatarType": "small",
+                                    "avatarId": "",
+                                    "largeAvatar": "",
+                                    "avatarX": 2,
+                                    "avatarY": 2,
+                                    "avatarWidth": 3,
+                                    "orientation": "left",
+                                    "__collapse": false
+                                },
+                                "id": "adfd3f5c-bf6a-464f-a877-3edf5fab6f11"
+                            },
+                            {
+                                "command": "EVENT_CALL_CUSTOM_EVENT",
+                                "args": {
+                                    "customEventId": "287332aa-9a2a-45c3-8fcd-f656234479c2"
+                                },
+                                "id": "3492e224-543f-4df9-8d6a-6f7e6175b33b"
+                            }
+                        ]
+                    },
+                    "id": "9ab8b756-b4a4-410d-8de6-0c37907b11d0"
                 }
             ]
         }
@@ -36574,6 +37143,36 @@
             "symbol": "var_part2"
         },
         {
+            "id": "58",
+            "name": "PresentMeetingAll",
+            "symbol": "var_presentmeetingall"
+        },
+        {
+            "id": "59",
+            "name": "PresentMeetingHale",
+            "symbol": "var_presentmeetinghale"
+        },
+        {
+            "id": "60",
+            "name": "PresentMeetingMissOak",
+            "symbol": "var_presentmeetingmissoak_0"
+        },
+        {
+            "id": "61",
+            "name": "PresentMeetingXed",
+            "symbol": "var_presentmeetingxed"
+        },
+        {
+            "id": "62",
+            "name": "PresentMeetingRory",
+            "symbol": "var_presentmeetingrory"
+        },
+        {
+            "id": "63",
+            "name": "PresentMeetingLindy",
+            "symbol": "var_presentmeetinglindy"
+        },
+        {
             "id": "871ea302-1cc1-463c-b9d7-530aac38fe81__L0",
             "name": "Spoken to gardener",
             "symbol": "var_spoken_to_gardener"
@@ -36609,34 +37208,14 @@
             "symbol": "var_local_0"
         },
         {
-            "id": "58",
-            "name": "PresentMeetingAll",
-            "symbol": "var_presentmeetingall"
+            "id": "64",
+            "name": "ExposeHale",
+            "symbol": "var_exposehale"
         },
         {
-            "id": "59",
-            "name": "PresentMeetingHale",
-            "symbol": "var_presentmeetinghale"
-        },
-        {
-            "id": "60",
-            "name": "PresentMeetingMissOak",
-            "symbol": "var_presentmeetingmissoak_0"
-        },
-        {
-            "id": "61",
-            "name": "PresentMeetingXed",
-            "symbol": "var_presentmeetingxed"
-        },
-        {
-            "id": "62",
-            "name": "PresentMeetingRory",
-            "symbol": "var_presentmeetingrory"
-        },
-        {
-            "id": "63",
-            "name": "PresentMeetingLindy",
-            "symbol": "var_presentmeetinglindy"
+            "id": "65",
+            "name": "ExposeRory",
+            "symbol": "var_exposerory"
         }
     ],
     "engineFieldValues": [
@@ -36654,8 +37233,8 @@
         "startDirection": "right",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 827.5999755859375,
-        "worldScrollY": 644.4000244140625,
+        "worldScrollX": 1073.5999755859375,
+        "worldScrollY": 641.2000122070312,
         "zoom": 100,
         "customColorsEnabled": true,
         "sgbEnabled": false,
