@@ -4336,7 +4336,7 @@
             "autoFadeSpeed": 1,
             "id": "e41e5538-fb2f-46d5-9758-05d1720ee12b",
             "x": 802.3999938964844,
-            "y": 853.1999969482422,
+            "y": 852.1999969482422,
             "actors": [
                 {
                     "name": "",
@@ -4585,7 +4585,7 @@
                                         {
                                             "command": "EVENT_LOOP",
                                             "args": {
-                                                "__collapse": true
+                                                "__collapse": false
                                             },
                                             "children": {
                                                 "true": [
@@ -4917,7 +4917,7 @@
                                                                         "avatarY": 2,
                                                                         "avatarWidth": 3,
                                                                         "orientation": "left",
-                                                                        "__collapse": true
+                                                                        "__collapse": false
                                                                     },
                                                                     "id": "f826a30a-ed6e-4f19-b443-4f14c1cd203a"
                                                                 }
@@ -4933,18 +4933,18 @@
                                                             "operator": "==",
                                                             "comparator": 3,
                                                             "__collapseElse": true,
-                                                            "__collapse": true
+                                                            "__collapse": false
                                                         },
                                                         "children": {
                                                             "true": [
                                                                 {
                                                                     "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
                                                                     "args": {
-                                                                        "__scriptTabs": "nameTag",
+                                                                        "__scriptTabs": "text",
                                                                         "text": [
-                                                                            "\\007\\002A man awakens on a\nhill, the smell of burning\nwood around him. He stands,",
-                                                                            "\\007\\002his hands covered in soot.\nAs he dreamt of the forest,\nthe forest dreamt of him.",
-                                                                            "\\007\\002Now it burns."
+                                                                            "\\007\\002A man awakens on a\nhill, the smell of burning\nwood around him. He ",
+                                                                            "\\007\\002stands, his hands covered in\nsoot. As he dreamt of the\nforest, the forest dreamt of",
+                                                                            "\\007\\002him.... Now it burns."
                                                                         ],
                                                                         "nameTag": "\\007\\002XED",
                                                                         "nameX": 2,
@@ -4955,7 +4955,7 @@
                                                                         "avatarY": 2,
                                                                         "avatarWidth": 3,
                                                                         "orientation": "left",
-                                                                        "__collapse": true
+                                                                        "__collapse": false
                                                                     },
                                                                     "id": "0c87c8ba-e3b4-45a9-af34-5a493316ec67"
                                                                 },
@@ -9810,7 +9810,7 @@
                     "args": {
                         "variable": "56",
                         "operator": "==",
-                        "comparator": "0",
+                        "comparator": 1,
                         "__collapseElse": true
                     },
                     "children": {
@@ -22886,8 +22886,9 @@
                                                 "__scriptTabs": "text",
                                                 "text": [
                                                     "\\007\\002Is that so? You don't\nlook like a cop. Also, you\ndon't scare me one bit.",
-                                                    "\\007\\002But perhaps you're trying to\nspark my interest instead. \nOhoho! Well, you have it.",
-                                                    "\\007\\002Let's discuss this more \nlater. For now I'll tell you\nwhat you want to know."
+                                                    "\\007\\002But perhaps you're trying\nto spark my interest\ninstead. Ohoho! Well, you",
+                                                    "\\007\\002have it. Let's discuss\nthis more later. For now\nI'll tell you what you ",
+                                                    "want to know."
                                                 ],
                                                 "nameTag": "\\007\\002MISS OAK",
                                                 "nameX": 2,
@@ -24103,11 +24104,11 @@
                                                     "\\007\\002We all arrived at the\nparty at around 9 at \nnight. Everyone arrived at",
                                                     "roughly the same time. I\nmingled for awhile and\ndrinks were abundant.",
                                                     "Everyone seemed in high\nspirits. No pun intended.\nI saw Hale at around",
-                                                    "11:30pm. We met up to\ncelebrate midnight together.",
-                                                    "We celebrated and I walked\nthrough the garden pass for\nsome fresh air at around",
-                                                    "midnight. Hale left to get\na drink. During my walk, I\nwandered by the maypole, ",
-                                                    "and that's when I found\nQuentin's body. I called\nout for the others and",
-                                                    "now you're here."
+                                                    "11:30pm. We met up to\ncelebrate midnight\ntogether.",
+                                                    "We celebrated and I walked\nthrough the garden pass\nfor some fresh air at ",
+                                                    "around midnight. Hale left\nto get a drink. During my\nwalk, I wandered by the",
+                                                    "maypole, and that's when\nI found Quentin's body.\nI called out for the ",
+                                                    "others and now you're\nhere."
                                                 ],
                                                 "nameTag": "\\007\\002LINDY",
                                                 "nameX": 2,
@@ -36249,26 +36250,6 @@
             ]
         },
         {
-            "id": "cf3010ea-14cc-47cb-bfd3-603d6e3dceeb",
-            "name": "LindyPart1Split",
-            "description": "",
-            "variables": {
-                "V0": {
-                    "id": "V0",
-                    "name": "Local 0",
-                    "passByReference": true
-                },
-                "V1": {
-                    "id": "V1",
-                    "name": "Local 1",
-                    "passByReference": true
-                }
-            },
-            "actors": {},
-            "symbol": "script_58",
-            "script": []
-        },
-        {
             "id": "3b4f0c65-04b1-4ac5-930e-1aa0253e3116",
             "name": "CheckPresentMeetingAll",
             "description": "",
@@ -37173,6 +37154,16 @@
             "symbol": "var_presentmeetinglindy"
         },
         {
+            "id": "64",
+            "name": "ExposeHale",
+            "symbol": "var_exposehale"
+        },
+        {
+            "id": "65",
+            "name": "ExposeRory",
+            "symbol": "var_exposerory"
+        },
+        {
             "id": "871ea302-1cc1-463c-b9d7-530aac38fe81__L0",
             "name": "Spoken to gardener",
             "symbol": "var_spoken_to_gardener"
@@ -37206,16 +37197,6 @@
             "id": "fd223a5f-7148-4705-98a7-b0ef56cb5c74__L0",
             "name": "Local 0",
             "symbol": "var_local_0"
-        },
-        {
-            "id": "64",
-            "name": "ExposeHale",
-            "symbol": "var_exposehale"
-        },
-        {
-            "id": "65",
-            "name": "ExposeRory",
-            "symbol": "var_exposerory"
         }
     ],
     "engineFieldValues": [
@@ -37233,8 +37214,8 @@
         "startDirection": "right",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1073.5999755859375,
-        "worldScrollY": 641.2000122070312,
+        "worldScrollX": 604.7999877929688,
+        "worldScrollY": 619.2000122070312,
         "zoom": 100,
         "customColorsEnabled": true,
         "sgbEnabled": false,
