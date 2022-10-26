@@ -2501,8 +2501,8 @@
                 0
             ],
             "id": "7ff8891e-d21c-4938-ba71-028a1964edf6",
-            "x": 343,
-            "y": 271,
+            "x": 342.4285716278698,
+            "y": 274.42857023278106,
             "actors": [],
             "triggers": [],
             "script": [
@@ -6208,7 +6208,7 @@
                     "command": "EVENT_CALL_CUSTOM_EVENT",
                     "args": {
                         "customEventId": "529231c5-c29d-44e9-b7a9-58dbf4369b2d",
-                        "__collapse": true,
+                        "__collapse": false,
                         "$variable[V0]$": {
                             "type": "variable",
                             "value": "0"
@@ -7439,13 +7439,6 @@
                     }
                 },
                 {
-                    "command": "EVENT_ACTOR_DEACTIVATE",
-                    "args": {
-                        "actorId": "$self$"
-                    },
-                    "id": "296ab7c5-029b-4c8e-945b-e9a3d2abc733"
-                },
-                {
                     "command": "EVENT_IF_VALUE",
                     "args": {
                         "variable": "14",
@@ -7943,7 +7936,7 @@
                     "command": "EVENT_CALL_CUSTOM_EVENT",
                     "args": {
                         "customEventId": "529231c5-c29d-44e9-b7a9-58dbf4369b2d",
-                        "__collapse": true,
+                        "__collapse": false,
                         "$variable[V0]$": {
                             "type": "variable",
                             "value": "0"
@@ -11297,7 +11290,7 @@
                         "variable": "34",
                         "operator": "==",
                         "comparator": 1,
-                        "__collapseElse": true
+                        "__collapseElse": false
                     },
                     "children": {
                         "true": [
@@ -11353,7 +11346,23 @@
                                 "id": "75027058-b587-4c8d-a469-e140bda48102"
                             }
                         ],
-                        "false": []
+                        "false": [
+                            {
+                                "command": "EVENT_IF_VALUE",
+                                "args": {
+                                    "variable": "57",
+                                    "operator": "==",
+                                    "comparator": 1,
+                                    "__collapseElse": true,
+                                    "__disableElse": true
+                                },
+                                "children": {
+                                    "true": [],
+                                    "false": []
+                                },
+                                "id": "30672f4a-3e09-4057-99d1-15ee79eb81c0"
+                            }
+                        ]
                     },
                     "id": "9dc0434c-8f53-41a1-9b98-46fc200d8df1"
                 }
@@ -21762,7 +21771,7 @@
                                     "operator": "==",
                                     "comparator": "0",
                                     "__collapseElse": true,
-                                    "__collapse": true,
+                                    "__collapse": false,
                                     "__disableElse": true
                                 },
                                 "children": {
@@ -23122,28 +23131,45 @@
                                                                                             "args": {
                                                                                                 "variable": "11",
                                                                                                 "operator": "==",
-                                                                                                "comparator": "0",
+                                                                                                "comparator": 1,
                                                                                                 "__collapseElse": true,
                                                                                                 "__disableElse": true
                                                                                             },
                                                                                             "children": {
                                                                                                 "true": [
                                                                                                     {
+                                                                                                        "command": "EVENT_IF_VALUE",
+                                                                                                        "args": {
+                                                                                                            "variable": "34",
+                                                                                                            "operator": "==",
+                                                                                                            "comparator": "0",
+                                                                                                            "__collapseElse": true,
+                                                                                                            "__disableElse": true
+                                                                                                        },
+                                                                                                        "children": {
+                                                                                                            "true": [
+                                                                                                                {
+                                                                                                                    "command": "EVENT_TEXT",
+                                                                                                                    "args": {
+                                                                                                                        "text": [
+                                                                                                                            "\\007\\002Hmm... it's been a bit since\nI've gone to my office..."
+                                                                                                                        ],
+                                                                                                                        "avatarId": "",
+                                                                                                                        "__collapse": false
+                                                                                                                    },
+                                                                                                                    "id": "adab5cab-cdbd-416f-b17e-ad5e6c3ee660"
+                                                                                                                }
+                                                                                                            ],
+                                                                                                            "false": []
+                                                                                                        },
+                                                                                                        "id": "d7c9a001-02de-4c05-bcf7-3bcbd3ca8ca3"
+                                                                                                    },
+                                                                                                    {
                                                                                                         "command": "EVENT_SET_TRUE",
                                                                                                         "args": {
                                                                                                             "variable": "34"
                                                                                                         },
                                                                                                         "id": "f24c0ea1-c259-484d-83cd-e59a0d0932e3"
-                                                                                                    },
-                                                                                                    {
-                                                                                                        "command": "EVENT_TEXT",
-                                                                                                        "args": {
-                                                                                                            "text": [
-                                                                                                                "\\007\\002Hmm... it's been a bit since I've gone to my\noffice..."
-                                                                                                            ],
-                                                                                                            "avatarId": ""
-                                                                                                        },
-                                                                                                        "id": "adab5cab-cdbd-416f-b17e-ad5e6c3ee660"
                                                                                                     }
                                                                                                 ],
                                                                                                 "false": []
@@ -24105,10 +24131,10 @@
                                                     "roughly the same time. I\nmingled for awhile and\ndrinks were abundant.",
                                                     "Everyone seemed in high\nspirits. No pun intended.\nI saw Hale at around",
                                                     "11:30pm. We met up to\ncelebrate midnight\ntogether.",
-                                                    "We celebrated and I walked\nthrough the garden pass for\nsome fresh air at around",
-                                                    "midnight. Hale left to get\na drink. During my walk, I\nwandered by the maypole, ",
-                                                    "and that's when I found\nQuentin's body. I called\nout for the others and",
-                                                    "now you're here."
+                                                    "We celebrated and I walked\nthrough the garden pass\nfor some fresh air at ",
+                                                    "around midnight. Hale left\nto get a drink. During my\nwalk, I wandered by the",
+                                                    "maypole, and that's when\nI found Quentin's body.\nI called out for the ",
+                                                    "others and now you're\nhere."
                                                 ],
                                                 "nameTag": "\\007\\002LINDY",
                                                 "nameX": 2,
@@ -24770,7 +24796,7 @@
                         "operator": "==",
                         "comparator": 1,
                         "__collapseElse": false,
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -37214,9 +37240,9 @@
         "startDirection": "right",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 604.7999877929688,
-        "worldScrollY": 619.2000122070312,
-        "zoom": 100,
+        "worldScrollX": 160.39999389648438,
+        "worldScrollY": 0,
+        "zoom": 50,
         "customColorsEnabled": true,
         "sgbEnabled": false,
         "customHead": "",
