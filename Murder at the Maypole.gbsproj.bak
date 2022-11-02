@@ -2977,33 +2977,6 @@
                     "id": "98fb5615-ab3a-44b1-83f3-009755f6a576"
                 },
                 {
-                    "command": "EVENT_SET_INPUT_SCRIPT",
-                    "args": {
-                        "input": [
-                            "a"
-                        ],
-                        "override": true,
-                        "__scriptTabs": "press",
-                        "__collapse": true
-                    },
-                    "children": {
-                        "true": [
-                            {
-                                "command": "EVENT_SWITCH_SCENE",
-                                "args": {
-                                    "sceneId": "97a06a3d-cf1b-4c1d-be1d-4adedff3eac4",
-                                    "x": 12,
-                                    "y": 6,
-                                    "direction": "",
-                                    "fadeSpeed": "2"
-                                },
-                                "id": "4f3c993b-312f-4d68-a72b-7565fd56e354"
-                            }
-                        ]
-                    },
-                    "id": "07499391-4808-4ce7-9797-6276e4b93312"
-                },
-                {
                     "command": "EVENT_ACTOR_DEACTIVATE",
                     "args": {
                         "actorId": "$self$",
@@ -3018,7 +2991,7 @@
                         "operator": "==",
                         "comparator": 1,
                         "__collapseElse": false,
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -3049,7 +3022,35 @@
                                 "id": "1539ba33-b839-46c2-844a-b5449898d588"
                             }
                         ],
-                        "false": []
+                        "false": [
+                            {
+                                "command": "EVENT_SET_INPUT_SCRIPT",
+                                "args": {
+                                    "input": [
+                                        "a"
+                                    ],
+                                    "override": true,
+                                    "__scriptTabs": "press",
+                                    "__collapse": false
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_SWITCH_SCENE",
+                                            "args": {
+                                                "sceneId": "97a06a3d-cf1b-4c1d-be1d-4adedff3eac4",
+                                                "x": 12,
+                                                "y": 6,
+                                                "direction": "",
+                                                "fadeSpeed": "2"
+                                            },
+                                            "id": "4f3c993b-312f-4d68-a72b-7565fd56e354"
+                                        }
+                                    ]
+                                },
+                                "id": "07499391-4808-4ce7-9797-6276e4b93312"
+                            }
+                        ]
                     },
                     "id": "85ccaa78-2046-4242-a5f2-c2dc8ef25009"
                 },
@@ -3442,7 +3443,7 @@
                         ],
                         "override": true,
                         "__scriptTabs": "press",
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -4585,7 +4586,7 @@
                                         {
                                             "command": "EVENT_LOOP",
                                             "args": {
-                                                "__collapse": false
+                                                "__collapse": true
                                             },
                                             "children": {
                                                 "true": [
@@ -6612,7 +6613,7 @@
                                                             "comparator": "0",
                                                             "__collapseElse": false,
                                                             "__disableElse": false,
-                                                            "__collapse": true
+                                                            "__collapse": false
                                                         },
                                                         "children": {
                                                             "true": [
@@ -8370,7 +8371,7 @@
                                                                         "comparator": "0",
                                                                         "__collapseElse": false,
                                                                         "__disableElse": false,
-                                                                        "__collapse": true
+                                                                        "__collapse": false
                                                                     },
                                                                     "children": {
                                                                         "true": [
@@ -9827,7 +9828,7 @@
                                                 "operator": "==",
                                                 "comparator": "0",
                                                 "__collapseElse": false,
-                                                "__collapse": false
+                                                "__collapse": true
                                             },
                                             "children": {
                                                 "true": [
@@ -9868,7 +9869,7 @@
                                         {
                                             "command": "EVENT_LOOP",
                                             "args": {
-                                                "__collapse": false
+                                                "__collapse": true
                                             },
                                             "children": {
                                                 "true": [
@@ -9983,7 +9984,7 @@
                                                                             "type": "variable",
                                                                             "value": "7"
                                                                         },
-                                                                        "__collapse": false
+                                                                        "__collapse": true
                                                                     },
                                                                     "id": "aa5561d3-ba79-4945-a737-5ebf42bbfd04"
                                                                 },
@@ -10554,7 +10555,7 @@
                                                 "operator": "==",
                                                 "comparator": "0",
                                                 "__collapseElse": false,
-                                                "__collapse": false
+                                                "__collapse": true
                                             },
                                             "children": {
                                                 "true": [
@@ -11301,7 +11302,7 @@
                                     "text": [
                                         "\\007\\002So... This is how I die,\nhuh. How depressing.",
                                         "........ you know, I believe\nI knew tonight would\nhappen, exactly as it did.",
-                                        "Last night after I awakened,\na small bone lie next to my\nsleeping cot.",
+                                        "Last night after I\nawakened, a small bone\nlie next to my cot.",
                                         "The dirt around it was\nblackened, as if burned in\na fire.",
                                         "I picked up the bone, and\nbeneath it was a small\nstring.",
                                         "It's important, somehow.",
@@ -21596,7 +21597,8 @@
                             "select"
                         ],
                         "override": true,
-                        "__scriptTabs": "press"
+                        "__scriptTabs": "press",
+                        "__collapse": true
                     },
                     "children": {
                         "true": [
@@ -23149,15 +23151,31 @@
                                                                                                         "children": {
                                                                                                             "true": [
                                                                                                                 {
-                                                                                                                    "command": "EVENT_TEXT",
+                                                                                                                    "command": "EVENT_IF_VALUE",
                                                                                                                     "args": {
-                                                                                                                        "text": [
-                                                                                                                            "\\007\\002Hmm... it's been a bit since\nI've gone to my office..."
-                                                                                                                        ],
-                                                                                                                        "avatarId": "",
-                                                                                                                        "__collapse": false
+                                                                                                                        "variable": "5",
+                                                                                                                        "operator": "==",
+                                                                                                                        "comparator": "0",
+                                                                                                                        "__collapseElse": true,
+                                                                                                                        "__disableElse": true
                                                                                                                     },
-                                                                                                                    "id": "adab5cab-cdbd-416f-b17e-ad5e6c3ee660"
+                                                                                                                    "children": {
+                                                                                                                        "true": [
+                                                                                                                            {
+                                                                                                                                "command": "EVENT_TEXT",
+                                                                                                                                "args": {
+                                                                                                                                    "text": [
+                                                                                                                                        "\\007\\002Hmm... it's been a bit since\nI've gone to my office..."
+                                                                                                                                    ],
+                                                                                                                                    "avatarId": "",
+                                                                                                                                    "__collapse": false
+                                                                                                                                },
+                                                                                                                                "id": "adab5cab-cdbd-416f-b17e-ad5e6c3ee660"
+                                                                                                                            }
+                                                                                                                        ],
+                                                                                                                        "false": []
+                                                                                                                    },
+                                                                                                                    "id": "48863ddd-8222-4a77-b6f5-6ba269629e9a"
                                                                                                                 }
                                                                                                             ],
                                                                                                             "false": []
@@ -26636,11 +26654,11 @@
                                         {
                                             "command": "EVENT_DIALOGUE_NAME_LARGE_AVATAR",
                                             "args": {
-                                                "__scriptTabs": "nameTag",
+                                                "__scriptTabs": "text",
                                                 "text": [
                                                     "\\007\\002You've talked to Rory\nalready? Hmph. That fool.\nI hope you're realizing the ",
-                                                    "secrets he's harboring.\nDon't trust him, not for a\nsecond. Speak with him again,",
-                                                    "separate out his rot."
+                                                    "secrets he's harboring.\nDon't trust him, not for a\nsecond. Speak with him ",
+                                                    "again, separate out his\nrot."
                                                 ],
                                                 "nameTag": "\\007\\002MISS OAK",
                                                 "nameX": 2,
@@ -26988,9 +27006,9 @@
                                                 "__scriptTabs": "text",
                                                 "text": [
                                                     "\\007\\002I have many, most\nexcellent thoughts!\nSometimes it's hard to pick",
-                                                    "which ones for sharing.\nSometimes I worry about the\nforest - it has seen so much.",
-                                                    "When my father passed, it was\nso hard. Anyway, enough of\nthat! You've got a mystery ",
-                                                    "to get back to!"
+                                                    "which ones for sharing.\nSometimes I worry about\nthe forest - it has seen ",
+                                                    "so much. When my father\npassed, it was so hard.\nAnyway, enough of that! ",
+                                                    "You've got a mystery to\nget back to!"
                                                 ],
                                                 "nameTag": "\\007\\002MISS OAK",
                                                 "nameX": 2,
@@ -27079,7 +27097,7 @@
                                     "operator": "==",
                                     "comparator": "0",
                                     "__collapseElse": true,
-                                    "__collapse": true,
+                                    "__collapse": false,
                                     "__disableElse": true
                                 },
                                 "children": {
@@ -27090,8 +27108,8 @@
                                                 "__scriptTabs": "text",
                                                 "text": [
                                                     "\\007\\002Detective... I wonder...",
-                                                    "Well... never mind. I just\nthought that perhaps you had\nheard things of Miss Oak?",
-                                                    "A curious whispering in the\ntrees... We shall talk later."
+                                                    "Well... never mind. I just\nthought that perhaps you\nhad heard rumors of ",
+                                                    "Miss Oak? A curious\nwhispering in the trees...\nWe shall talk later. "
                                                 ],
                                                 "nameTag": "\\007\\002XED",
                                                 "nameX": 2,
@@ -27140,8 +27158,8 @@
                                             "args": {
                                                 "__scriptTabs": "text",
                                                 "text": [
-                                                    "\\007\\002If you wake in an\nunfamiliar place, close your\neyes and wait three seconds.",
-                                                    "Beware blood on the moon,\nalways wear tiger's eye\naround your neck.",
+                                                    "\\007\\002If you wake in an\nunfamiliar place, close your\neyes and wait three ",
+                                                    "seconds. Beware blood on the\nmoon, always wear tiger's\neye around your neck.",
                                                     "And question everyone. We\nall hold our own secrets."
                                                 ],
                                                 "nameTag": "\\007\\002XED",
@@ -27218,7 +27236,8 @@
                                                                         "variable": "V3",
                                                                         "operator": "==",
                                                                         "comparator": 1,
-                                                                        "__collapseElse": false
+                                                                        "__collapseElse": false,
+                                                                        "__collapse": false
                                                                     },
                                                                     "children": {
                                                                         "true": [
@@ -27228,9 +27247,9 @@
                                                                                     "__scriptTabs": "text",
                                                                                     "text": [
                                                                                         "\\007\\002Two kindred spirits,\nsouls scrambling to\nunderstand one another.",
-                                                                                        "Perhaps it is enough to sit\ntogether in silence. Hale\nhas her own life, and cannot ",
-                                                                                        "attend to mine as often as\nI would like. I saw her with\nLindy. But the two rarely",
-                                                                                        "speak. Strange... to see\nthem together."
+                                                                                        "Perhaps it is enough to sit\ntogether in silence. Hale\nhas her own life, and ",
+                                                                                        "cannot attend to mine as\noften as I would like. I\nsaw her with Lindy. But the ",
+                                                                                        "two rarely speak. Strange...\nto see them together."
                                                                                     ],
                                                                                     "nameTag": "\\007\\002XED",
                                                                                     "nameX": 2,
@@ -27244,6 +27263,43 @@
                                                                                     "__collapse": false
                                                                                 },
                                                                                 "id": "953be13c-4bdd-4489-91c9-b0caa06feeb8"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_IF_VALUE",
+                                                                                "args": {
+                                                                                    "variable": "28",
+                                                                                    "operator": "==",
+                                                                                    "comparator": "0",
+                                                                                    "__collapseElse": true
+                                                                                },
+                                                                                "children": {
+                                                                                    "true": [
+                                                                                        {
+                                                                                            "command": "EVENT_CALL_CUSTOM_EVENT",
+                                                                                            "args": {
+                                                                                                "customEventId": "e3164853-1945-42b8-9578-3129cd7f9184",
+                                                                                                "$variable[V0]$": {
+                                                                                                    "type": "variable",
+                                                                                                    "value": "28"
+                                                                                                }
+                                                                                            },
+                                                                                            "id": "7550365d-ac29-4858-ad4c-a698d0f428b5"
+                                                                                        },
+                                                                                        {
+                                                                                            "command": "EVENT_TEXT",
+                                                                                            "args": {
+                                                                                                "text": [
+                                                                                                    "\\007\\002Evidence updated:\nHale and Lindy"
+                                                                                                ],
+                                                                                                "avatarId": "",
+                                                                                                "__collapse": false
+                                                                                            },
+                                                                                            "id": "aa34fccf-e8fe-4778-92ad-a6728e04eba6"
+                                                                                        }
+                                                                                    ],
+                                                                                    "false": []
+                                                                                },
+                                                                                "id": "9f9dc49d-7a88-4468-862d-2d9926528669"
                                                                             }
                                                                         ],
                                                                         "false": [
@@ -27337,9 +27393,9 @@
                                                                                     "__scriptTabs": "text",
                                                                                     "text": [
                                                                                         "\\007\\002Two kindred spirits,\nsouls scrambling to\nunderstand one another.",
-                                                                                        "Perhaps it is enough to sit\ntogether in silence. Hale\nhas her own life, and cannot ",
-                                                                                        "attend to mine as often as\nI would like. I saw her with\nLindy. But the two rarely",
-                                                                                        "speak. Strange... to see\nthem together."
+                                                                                        "Perhaps it is enough to sit\ntogether in silence. Hale\nhas her own life, and ",
+                                                                                        "cannot attend to mine as\noften as I would like. I\nsaw her with Lindy. But the ",
+                                                                                        "two rarely speak. Strange...\nto see them together."
                                                                                     ],
                                                                                     "nameTag": "\\007\\002XED",
                                                                                     "nameX": 2,
@@ -27352,7 +27408,7 @@
                                                                                     "orientation": "left",
                                                                                     "__collapse": false
                                                                                 },
-                                                                                "id": "422de3ee-d4cc-4a8a-abcc-9e8c45f23a88"
+                                                                                "id": "6e45de6e-cbdc-49ca-9a75-0e8bc8383e21"
                                                                             },
                                                                             {
                                                                                 "command": "EVENT_IF_VALUE",
@@ -27669,7 +27725,7 @@
                                     "comparator": 1,
                                     "__collapseElse": true,
                                     "__disableElse": true,
-                                    "__collapse": true
+                                    "__collapse": false
                                 },
                                 "children": {
                                     "true": [
@@ -27680,7 +27736,7 @@
                                                 "text": [
                                                     "\\007\\002Why, my good detective,\nmust you always need my\nhelp before you do ",
                                                     "anything? Of course you\nmust interrogate everyone\nhere. I have no doubt that",
-                                                    "the murderer is one - maybe\ntwo! or three! people!\nPerhaps a conspiracy! We ",
+                                                    "the murderer is one - or\ntwo! or three! people!\nPerhaps a conspiracy! We ",
                                                     "must uncover the truth at\nonce!"
                                                 ],
                                                 "nameTag": "\\007\\002RORY",
@@ -28156,7 +28212,8 @@
                                     "operator": "==",
                                     "comparator": 1,
                                     "__collapseElse": true,
-                                    "__disableElse": true
+                                    "__disableElse": true,
+                                    "__collapse": true
                                 },
                                 "children": {
                                     "true": [
@@ -28165,9 +28222,9 @@
                                             "args": {
                                                 "__scriptTabs": "text",
                                                 "text": [
-                                                    "\\007\\002... Do you really need\nme to tell you? Aren't you\nsupposed to be a detective?",
-                                                    "Go... investigate stuff. I\ndon't know.",
-                                                    "Or just feel free to go home\nif you don't feel like\nfinding out who did it."
+                                                    "\\007\\002... Do you really need\nme to tell you? Aren't you\nsupposed to be a ",
+                                                    "detective? Go...investigate\nstuff. I don't know.",
+                                                    "Or just feel free to go\nhome if you don't feel\nlike finding out who did it."
                                                 ],
                                                 "nameTag": "\\007\\002LINDY",
                                                 "nameX": 2,
@@ -28194,7 +28251,8 @@
                                     "operator": "==",
                                     "comparator": 2,
                                     "__collapseElse": true,
-                                    "__disableElse": true
+                                    "__disableElse": true,
+                                    "__collapse": false
                                 },
                                 "children": {
                                     "true": [
@@ -28588,8 +28646,9 @@
                                             "args": {
                                                 "__scriptTabs": "text",
                                                 "text": [
-                                                    "\\007\\002Not really. Like I said\nbefore, Quentin was murdered\nand someone here did it. ",
-                                                    "If you can't find holes in\npeople's testimonies, then\nI don't know how to help you."
+                                                    "\\007\\002Not really. Like I said\nbefore, Quentin was\nmurdered and someone here",
+                                                    "did it. If you can't find\nholes in people's\ntestimonies, then I don't ",
+                                                    "know how to help you."
                                                 ],
                                                 "nameTag": "\\007\\002LINDY",
                                                 "nameX": 2,
@@ -28634,9 +28693,9 @@
                 {
                     "command": "EVENT_SET_TRUE",
                     "args": {
-                        "variable": "34",
+                        "variable": "5",
                         "__collapse": false,
-                        "__comment": true
+                        "__comment": false
                     },
                     "id": "6e459ebd-2edc-415a-960f-9d0a6941af0f"
                 },
@@ -28663,9 +28722,18 @@
                     "args": {
                         "variable": "18",
                         "__collapse": true,
-                        "__comment": true
+                        "__comment": false
                     },
                     "id": "e1c4102c-5a8e-4ab1-9539-c0dc697cc18e"
+                },
+                {
+                    "command": "EVENT_SET_TRUE",
+                    "args": {
+                        "variable": "11",
+                        "__collapse": true,
+                        "__comment": false
+                    },
+                    "id": "4a4b37bb-07d1-4963-b83f-9824ed14c28e"
                 },
                 {
                     "command": "EVENT_SET_TRUE",
