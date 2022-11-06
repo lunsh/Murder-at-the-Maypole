@@ -1374,7 +1374,7 @@
                                                                     "command": "EVENT_TEXT",
                                                                     "args": {
                                                                         "text": [
-                                                                            "\\007\\002Hale and Lindy were\ntogether before the murder,\nbut are they friends?"
+                                                                            "\\007\\002They were together\nbefore the murder,\nbut are they friends?"
                                                                         ],
                                                                         "avatarId": ""
                                                                     },
@@ -4586,7 +4586,7 @@
                                         {
                                             "command": "EVENT_LOOP",
                                             "args": {
-                                                "__collapse": true
+                                                "__collapse": false
                                             },
                                             "children": {
                                                 "true": [
@@ -4665,7 +4665,7 @@
                                                             "operator": "==",
                                                             "comparator": 1,
                                                             "__collapseElse": true,
-                                                            "__collapse": false,
+                                                            "__collapse": true,
                                                             "__disableElse": true
                                                         },
                                                         "children": {
@@ -4944,8 +4944,8 @@
                                                                         "__scriptTabs": "text",
                                                                         "text": [
                                                                             "\\007\\002A man awakens on a\nhill, the smell of burning\nwood around him. He ",
-                                                                            "\\007\\002stands, his hands covered in\nsoot. As he dreamt of the\nforest, the forest dreamt of",
-                                                                            "\\007\\002him.... Now it burns."
+                                                                            "\\007\\002stands, his hands covered\nin soot. As he dreamt\nof the forest, the ",
+                                                                            "forest dreamt of him...\nNow it burns."
                                                                         ],
                                                                         "nameTag": "\\007\\002XED",
                                                                         "nameX": 2,
@@ -11498,9 +11498,9 @@
                             "args": {
                                 "text": [
                                     "\\007\\002It's Quentin, the host\nof the party and the\nmurder victim.",
-                                    "Only a few hours ago,\nblood coursing through his\nveins. Now... an empty",
-                                    "corpse.",
-                                    ".............."
+                                    "\\007\\002Only a few hours ago,\nblood coursing through his\nveins. Now... an empty",
+                                    "\\007\\002corpse.",
+                                    "\\007\\002.............."
                                 ],
                                 "avatarId": ""
                             },
@@ -22646,7 +22646,7 @@
                                                     "\\007\\002Lindy for a spell at the\nmaypole at around 10:30.\nWe spoke of nothing of",
                                                     "\\007\\002consequence... oh.\nCuriously, I saw Hale\nclose to midnight. Where ",
                                                     "\\007\\002did I see her? She seemed\nflustered. And that was it\nuntil Lindy screamed just",
-                                                    "\\007\\002after midnight. She had\nfound the body. Poor\nQuentin. So many questions. "
+                                                    "\\007\\002after midnight. She had\nfound the body. Poor\nQuentin. So intriguing..."
                                                 ],
                                                 "nameTag": "\\007\\002MISS OAK",
                                                 "nameX": 2,
@@ -25581,7 +25581,7 @@
                                     "comparator": 1,
                                     "__collapseElse": true,
                                     "__disableElse": true,
-                                    "__collapse": false
+                                    "__collapse": true
                                 },
                                 "children": {
                                     "true": [
@@ -25619,7 +25619,8 @@
                                     "operator": "==",
                                     "comparator": 2,
                                     "__collapseElse": true,
-                                    "__disableElse": true
+                                    "__disableElse": true,
+                                    "__collapse": true
                                 },
                                 "children": {
                                     "true": [
@@ -26015,7 +26016,7 @@
                                     "comparator": 3,
                                     "__collapseElse": true,
                                     "__disableElse": true,
-                                    "__collapse": true
+                                    "__collapse": false
                                 },
                                 "children": {
                                     "true": [
@@ -26026,7 +26027,7 @@
                                                 "text": [
                                                     "\\007\\002\nI just can't believe\nQuentin is gone. Will we\neven all stay friends ",
                                                     "without him? He always\nmade sure we saw each\nother regularly. And he ",
-                                                    "would keep us from fighting.\nThis may just tear us all\napart."
+                                                    "would keep us from\nfighting. This may just\ntear us all apart."
                                                 ],
                                                 "nameTag": "\\007\\002HALE",
                                                 "nameX": 2,
@@ -27097,7 +27098,7 @@
                                     "operator": "==",
                                     "comparator": "0",
                                     "__collapseElse": true,
-                                    "__collapse": false,
+                                    "__collapse": true,
                                     "__disableElse": true
                                 },
                                 "children": {
@@ -27159,8 +27160,8 @@
                                                 "__scriptTabs": "text",
                                                 "text": [
                                                     "\\007\\002If you wake in an\nunfamiliar place, close your\neyes and wait three ",
-                                                    "seconds. Beware blood on the\nmoon, always wear tiger's\neye around your neck.",
-                                                    "And question everyone. We\nall hold our own secrets."
+                                                    "seconds. Beware blood on\nthe moon, always wear\ntiger's eye around your ",
+                                                    "neck. And question\neveryone. We all hold\nour own secrets."
                                                 ],
                                                 "nameTag": "\\007\\002XED",
                                                 "nameX": 2,
@@ -30309,13 +30310,13 @@
                                                 "__scriptTabs": "text",
                                                 "text": [
                                                     "\\007\\002My dear detective,\nI'm always doing well.\nVery little brings me down!",
-                                                    "Have you found any evidence\nyet? No, don't tell me. \nLet me guess.",
+                                                    "Have you found any\nevidence yet? No, don't\ntell me. Let me guess.",
                                                     "Not as much as you'd\nhoped? My dear detective,\nI'm sure you will find more",
                                                     "soon! These things take\ntime, I hope you aren't too\nimpatient.",
-                                                    "I'm sure NO one is judging\nyou whatsoever on your lack\nof progress.",
-                                                    "I'm sure you'll find insight\nsoon! Or, if you need more\nhelp, I'd be happy to assist.",
-                                                    "After all, I know more about\nthese people than they do\nsometimes! After all my dear ",
-                                                    "detective, you know you can\ntrust me, don't you?"
+                                                    "I'm sure NO one is judging\nyou whatsoever on your\nlack of progress.",
+                                                    "I'm sure you'll find insight\nsoon! Or, if you need more\nhelp, I'd be happy to ",
+                                                    "assist. After all, I know\nmore about these people\nthan they do sometimes! ",
+                                                    "After all, my dear\ndetective, you know you\ncan trust me, don't you?"
                                                 ],
                                                 "nameTag": "\\007\\002RORY",
                                                 "nameX": 2,
@@ -30671,10 +30672,10 @@
                     "args": {
                         "__scriptTabs": "text",
                         "text": [
-                            "\\007\\002Detective, you seem like\na pretty serious person. I\nhope you're intent on solving",
-                            "this case. Do you know what\nit's like for us? To have\none of our friends be killed",
-                            "and knowing that another one\nof our friends did it? To\nboth suspect and be ",
-                            "suspected by those closest\nto us?"
+                            "\\007\\002Detective, you seem like\na pretty serious person. I\nhope you're intent on ",
+                            "solving this case. Do you\nknow what it's like for us?\nTo have one of our friends",
+                            "be killed and knowing that\nanother one of our friends\ndid it? To both suspect ",
+                            "and be suspected by those\nclosest to us?"
                         ],
                         "nameTag": "\\007\\002LINDY",
                         "nameX": 2,
@@ -30724,8 +30725,8 @@
                                     "__scriptTabs": "text",
                                     "text": [
                                         "\\007\\002So you see it as a\ndistraction? I suppose\nthat's fair.",
-                                        "If it's too personal for you,\nyou'll let your judgement\nbe clouded. I do respect ",
-                                        "that, even though I think\nyou're a bit of a thug."
+                                        "If it's too personal for\nyou, you'll let your\njudgement be clouded. I ",
+                                        "do respect that, even\nthough I think you're a\nbit of a thug."
                                     ],
                                     "nameTag": "\\007\\002LINDY",
                                     "nameX": 2,
@@ -30939,12 +30940,13 @@
                                             "args": {
                                                 "__scriptTabs": "text",
                                                 "text": [
-                                                    "\\007\\002Hey, I'm fine over here.\nI'm not the murderer, so I\ndon't have anything to worry",
-                                                    "about. I'm just amused\nwatching you run around like\na little chicken. Have you ",
-                                                    "ever seen a chicken dance?\nThat's how I imagine you\ngathering evidence right now.",
-                                                    "I hope you didn't walk over\nany footprints, miss any\nmurder weapons, or read your",
-                                                    "horoscope while interviewing\nall of us. Look, I'm a little\nstressed right now. You should ",
-                                                    "get back to your investigation."
+                                                    "\\007\\002Hey, I'm fine over here.\nI'm not the murderer, so I\ndon't have anything to ",
+                                                    "worry about. I'm just\namused watching you run\naround like a little ",
+                                                    "chicken. Have you ever\nseen a chicken dance?\nThat's how I imagine you",
+                                                    "gathering evidence right\nnow. I hope you didn't\nwalk over any footprints,",
+                                                    "miss any murder weapons,\nor read your horoscope\nwhile interviewing all of ",
+                                                    "us. ...Look, I'm a little\nstressed right now. You\nshould get back to your ",
+                                                    "investigation, okay?"
                                                 ],
                                                 "nameTag": "\\007\\002LINDY",
                                                 "nameX": 2,
@@ -30975,6 +30977,13 @@
                                 },
                                 "children": {
                                     "true": [
+                                        {
+                                            "command": "EVENT_SET_FALSE",
+                                            "args": {
+                                                "variable": "V2"
+                                            },
+                                            "id": "c0c468ce-6390-4dd3-8e30-42c7c2b1ffb7"
+                                        },
                                         {
                                             "command": "EVENT_IF_VALUE",
                                             "args": {
@@ -31030,7 +31039,7 @@
                                                                                 "command": "EVENT_SET_TRUE",
                                                                                 "args": {
                                                                                     "variable": "V2",
-                                                                                    "__collapse": true
+                                                                                    "__collapse": false
                                                                                 },
                                                                                 "id": "9d6bb299-db42-4079-8d92-4152261ff1a6"
                                                                             }
@@ -37308,7 +37317,7 @@
         "startDirection": "right",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 0,
+        "worldScrollX": 9.199999809265137,
         "worldScrollY": 0,
         "zoom": 50,
         "customColorsEnabled": true,
